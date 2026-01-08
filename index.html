@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabulary Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero-top">
+          <span class="badge">Vocabulary Lab</span>
+          <div class="language">
+            <label for="language">Language</label>
+            <select id="language" disabled>
+              <option value="en" selected>English</option>
+            </select>
+            <span class="language-note">More soon</span>
+          </div>
+        </div>
+        <h1>Discover your English vocabulary size</h1>
+        <p>
+          A clean, fast test that samples words across difficulty bands and
+          estimates your total vocabulary. No login. No fluff.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" id="start-test">Start test</button>
+          <button class="ghost" id="learn-more">How it works</button>
+        </div>
+      </header>
+
+      <section class="card" id="test-card" data-state="idle">
+        <div class="card-top">
+          <div>
+            <p class="eyebrow">Question</p>
+            <h2 id="progress">1 / 30</h2>
+          </div>
+          <div class="meter">
+            <div class="meter-fill" id="meter-fill"></div>
+          </div>
+        </div>
+
+        <div class="word-area">
+          <span class="word" id="word">the</span>
+          <span class="subword" id="band">Band 1 (1-500)</span>
+        </div>
+
+        <div class="actions">
+          <button class="primary" data-answer="yes">I know it</button>
+          <button class="secondary" data-answer="unsure">Not sure</button>
+          <button class="ghost" data-answer="no">I do not know it</button>
+        </div>
+
+        <div class="note" id="note">
+          Trust your first instinct. No definitions will be shown during the
+          test.
+        </div>
+      </section>
+
+      <section class="card" id="result-card" data-state="idle">
+        <div class="result-top">
+          <div>
+            <p class="eyebrow">Estimate</p>
+            <h2 id="estimate">0 words</h2>
+          </div>
+          <span class="level" id="level">A1</span>
+        </div>
+        <p class="result-explain" id="level-explain"></p>
+
+        <div class="stat-grid">
+          <div>
+            <p class="eyebrow">Samples</p>
+            <p class="stat" id="sample-count">0</p>
+          </div>
+          <div>
+            <p class="eyebrow">Known rate</p>
+            <p class="stat" id="known-rate">0%</p>
+          </div>
+          <div>
+            <p class="eyebrow">Coverage</p>
+            <p class="stat" id="coverage">20 bands</p>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="primary" id="restart">Retake</button>
+          <button class="ghost" id="share">Copy summary</button>
+        </div>
+
+        <p class="fine-print">
+          This estimate is based on a sample from 20 frequency bands. Future
+          language packs will let you test other languages and scripts.
+        </p>
+      </section>
+
+      <section class="card" id="info-card" data-state="idle">
+        <h3>How this test works</h3>
+        <p>
+          We sample words from across frequency bands (common to rare). You mark
+          whether you know each word, and we estimate your total vocabulary size
+          by extrapolating from your sample rate per band.
+        </p>
+        <ul>
+          <li>Answer quickly to reduce second-guessing.</li>
+          <li>"Not sure" counts as half-known.</li>
+          <li>Retake if you want a tighter estimate.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

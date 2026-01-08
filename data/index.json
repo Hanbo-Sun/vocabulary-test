@@ -1,0 +1,76 @@
+{
+  "packs": [
+    {
+      "code": "en",
+      "name": "English",
+      "file": "data/en.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "word",
+      "unitLabel": "words"
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "file": "data/es.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "word",
+      "unitLabel": "words"
+    },
+    {
+      "code": "zh",
+      "name": "Chinese (Characters)",
+      "file": "data/zh.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "character",
+      "unitLabel": "characters"
+    },
+    {
+      "code": "zh-hant",
+      "name": "Chinese (Traditional)",
+      "file": "data/zh-hant.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "character",
+      "unitLabel": "characters"
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "file": "data/fr.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "word",
+      "unitLabel": "words"
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "file": "data/de.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "word",
+      "unitLabel": "words"
+    },
+    {
+      "code": "ja-kana",
+      "name": "Japanese (Kana)",
+      "file": "data/ja-kana.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "character",
+      "unitLabel": "characters"
+    },
+    {
+      "code": "ko-hanja",
+      "name": "Korean (Hanja)",
+      "file": "data/ko-hanja.json",
+      "size": 100,
+      "bands": 20,
+      "mode": "character",
+      "unitLabel": "characters"
+    }
+  ]
+}

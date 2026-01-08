@@ -16,35 +16,60 @@
     <main class="page">
       <header class="hero">
         <div class="hero-top">
-          <span class="badge">Vocabulary Lab</span>
-          <div class="language">
-            <label for="language">Language</label>
-            <select id="language" disabled>
-              <option value="en" selected>English</option>
-            </select>
-            <span class="language-note">More soon</span>
+          <span class="badge" data-i18n="badge">Vocabulary Lab</span>
+          <div class="language-group">
+            <div class="language">
+              <label for="language" data-i18n="testLanguage">Test language</label>
+              <select id="language"></select>
+              <span class="language-note" id="language-note">Ready</span>
+            </div>
+            <div class="language">
+              <label for="ui-language" data-i18n="uiLanguage">UI language</label>
+              <select id="ui-language">
+                <option value="auto" data-i18n="uiLanguageAuto">Auto</option>
+                <option value="en">English</option>
+                <option value="zh-Hans">中文简体</option>
+                <option value="zh-Hant">中文繁體</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
           </div>
         </div>
-        <h1>Discover your English vocabulary size</h1>
-        <p>
+        <h1 id="hero-title">Discover your English vocabulary size</h1>
+        <p id="hero-copy">
           A clean, fast test that samples words across difficulty bands and
           estimates your total vocabulary. No login. No fluff.
         </p>
         <div class="hero-actions">
-          <button class="primary" id="start-test">Start test</button>
-          <button class="ghost" id="learn-more">How it works</button>
+          <button class="primary" id="start-test" data-i18n="startTest">Start test</button>
+          <button class="ghost" id="learn-more" data-i18n="howItWorks">How it works</button>
+          <button class="ghost" id="manage-packs" data-i18n="managePacks">Manage packs</button>
+          <button class="ghost" id="density-toggle" type="button"></button>
+          <button class="ghost" id="theme-toggle" type="button"></button>
         </div>
       </header>
 
       <section class="card" id="test-card" data-state="idle">
         <div class="card-top">
           <div>
-            <p class="eyebrow">Question</p>
+            <p class="eyebrow" data-i18n="question">Question</p>
             <h2 id="progress">1 / 30</h2>
           </div>
           <div class="meter">
             <div class="meter-fill" id="meter-fill"></div>
           </div>
+        </div>
+        <div class="settings-row">
+          <label for="estimator" data-i18n="estimatorLabel">Estimator</label>
+          <select id="estimator">
+            <option value="smoothed" selected data-i18n="estimatorSmoothed">
+              Smoothed
+            </option>
+            <option value="simple" data-i18n="estimatorSimple">Simple</option>
+          </select>
+          <span class="settings-note" id="estimator-note">
+            Smoothed keeps bands monotonic.
+          </span>
         </div>
 
         <div class="word-area">
@@ -53,12 +78,18 @@
         </div>
 
         <div class="actions">
-          <button class="primary" data-answer="yes">I know it</button>
-          <button class="secondary" data-answer="unsure">Not sure</button>
-          <button class="ghost" data-answer="no">I do not know it</button>
+          <button class="primary" data-answer="yes" data-i18n="knowIt">
+            I know it
+          </button>
+          <button class="secondary" data-answer="unsure" data-i18n="notSure">
+            Not sure
+          </button>
+          <button class="ghost" data-answer="no" data-i18n="dontKnow">
+            I do not know it
+          </button>
         </div>
 
-        <div class="note" id="note">
+        <div class="note" id="note" data-i18n="trustInstinct">
           Trust your first instinct. No definitions will be shown during the
           test.
         </div>
@@ -67,7 +98,7 @@
       <section class="card" id="result-card" data-state="idle">
         <div class="result-top">
           <div>
-            <p class="eyebrow">Estimate</p>
+            <p class="eyebrow" data-i18n="estimate">Estimate</p>
             <h2 id="estimate">0 words</h2>
           </div>
           <span class="level" id="level">A1</span>
@@ -76,42 +107,145 @@
 
         <div class="stat-grid">
           <div>
-            <p class="eyebrow">Samples</p>
+            <p class="eyebrow" data-i18n="samples">Samples</p>
             <p class="stat" id="sample-count">0</p>
           </div>
           <div>
-            <p class="eyebrow">Known rate</p>
+            <p class="eyebrow" data-i18n="knownRate">Known rate</p>
             <p class="stat" id="known-rate">0%</p>
           </div>
           <div>
-            <p class="eyebrow">Coverage</p>
+            <p class="eyebrow" data-i18n="coverage">Coverage</p>
             <p class="stat" id="coverage">20 bands</p>
           </div>
         </div>
 
         <div class="result-actions">
-          <button class="primary" id="restart">Retake</button>
-          <button class="ghost" id="share">Copy summary</button>
+          <button class="primary" id="restart" data-i18n="retake">Retake</button>
+          <button class="ghost" id="share" data-i18n="copySummary">Copy summary</button>
         </div>
 
-        <p class="fine-print">
-          This estimate is based on a sample from 20 frequency bands. Future
-          language packs will let you test other languages and scripts.
+        <p class="fine-print" id="result-note">
+          This estimate is based on a sample from 20 frequency bands.
         </p>
       </section>
 
       <section class="card" id="info-card" data-state="idle">
-        <h3>How this test works</h3>
-        <p>
+        <h3 data-i18n="howWorksTitle">How this test works</h3>
+        <p data-i18n="howWorksBody">
           We sample words from across frequency bands (common to rare). You mark
           whether you know each word, and we estimate your total vocabulary size
-          by extrapolating from your sample rate per band.
+          using a smoothed, monotonic model across bands.
         </p>
         <ul>
-          <li>Answer quickly to reduce second-guessing.</li>
-          <li>"Not sure" counts as half-known.</li>
-          <li>Retake if you want a tighter estimate.</li>
+          <li data-i18n="howWorksBullet1">Answer quickly to reduce second-guessing.</li>
+          <li data-i18n="howWorksBullet2">"Not sure" counts as half-known.</li>
+          <li data-i18n="howWorksBullet3">Switch estimators for a raw vs smoothed view.</li>
         </ul>
+      </section>
+
+      <section class="card" id="pack-card" data-state="active">
+        <h3 data-i18n="packsTitle">Language packs</h3>
+        <p class="muted" data-i18n="packsBody">
+          Add more languages or character sets later by importing CSV or JSON.
+        </p>
+        <div class="pack-grid">
+          <div class="pack-panel">
+            <h4 data-i18n="installedPacks">Installed packs</h4>
+            <div id="pack-list" class="pack-list"></div>
+          </div>
+          <div class="pack-panel">
+            <h4 data-i18n="importPack">Import a pack</h4>
+            <form id="pack-form" class="pack-form">
+              <label>
+                <span data-i18n="languageName">Language name</span>
+                <input
+                  type="text"
+                  id="pack-name"
+                  placeholder="Spanish"
+                  data-i18n-placeholder="languageNamePlaceholder"
+                  required
+                />
+              </label>
+              <label>
+                <span data-i18n="languageCode">Language code</span>
+                <input
+                  type="text"
+                  id="pack-code"
+                  placeholder="es"
+                  data-i18n-placeholder="languageCodePlaceholder"
+                  required
+                />
+              </label>
+              <label>
+                <span data-i18n="unitType">Unit type</span>
+                <select id="pack-mode">
+                  <option value="auto" selected data-i18n="unitAuto">Auto (from file)</option>
+                  <option value="word" data-i18n="unitWord">Word</option>
+                  <option value="character" data-i18n="unitCharacter">Character</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="bandSize">Band size (optional)</span>
+                <input
+                  type="number"
+                  id="pack-band-size"
+                  min="50"
+                  max="5000"
+                  placeholder="500"
+                  data-i18n-placeholder="bandSizePlaceholder"
+                />
+              </label>
+              <label>
+                <span data-i18n="packFile">Pack file (JSON or CSV)</span>
+                <input type="file" id="pack-file" accept=".json,.csv" required />
+              </label>
+              <div class="template-links">
+                <a
+                  class="ghost-link"
+                  href="templates/word-pack.csv"
+                  download
+                  data-i18n="templateCsvWord"
+                >
+                  CSV template (word)
+                </a>
+                <a
+                  class="ghost-link"
+                  href="templates/char-pack.csv"
+                  download
+                  data-i18n="templateCsvChar"
+                >
+                  CSV template (character)
+                </a>
+                <a
+                  class="ghost-link"
+                  href="templates/word-pack.json"
+                  download
+                  data-i18n="templateJsonWord"
+                >
+                  JSON template (word)
+                </a>
+                <a
+                  class="ghost-link"
+                  href="templates/char-pack.json"
+                  download
+                  data-i18n="templateJsonChar"
+                >
+                  JSON template (character)
+                </a>
+              </div>
+              <button class="primary" type="submit" data-i18n="importButton">
+                Import pack
+              </button>
+              <p class="fine-print" id="pack-help" data-i18n="packHelp">
+                CSV columns: word,rank (optional: band,range). Unit type and
+                band size help auto-generate ranges. JSON should match the
+                existing data schema.
+              </p>
+              <div class="pack-errors" id="pack-errors" role="status"></div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 

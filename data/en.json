@@ -1,6 +1,8 @@
 {
   "language": "English",
   "code": "en",
+  "mode": "word",
+  "unitLabel": "words",
   "maxRank": 10000,
   "bandSize": 500,
   "bands": [

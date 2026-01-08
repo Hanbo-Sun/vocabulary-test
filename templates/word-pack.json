@@ -1,0 +1,22 @@
+{
+  "language": "Example Language",
+  "code": "xx",
+  "mode": "word",
+  "unitLabel": "words",
+  "maxRank": 2500,
+  "bandSize": 500,
+  "bands": [
+    { "index": 1, "range": "1-500", "size": 500 },
+    { "index": 2, "range": "501-1000", "size": 500 },
+    { "index": 3, "range": "1001-1500", "size": 500 },
+    { "index": 4, "range": "1501-2000", "size": 500 },
+    { "index": 5, "range": "2001-2500", "size": 500 }
+  ],
+  "words": [
+    { "word": "the", "rank": 1, "band": 1, "range": "1-500" },
+    { "word": "time", "rank": 520, "band": 2, "range": "501-1000" },
+    { "word": "river", "rank": 1120, "band": 3, "range": "1001-1500" },
+    { "word": "journey", "rank": 1860, "band": 4, "range": "1501-2000" },
+    { "word": "native", "rank": 2260, "band": 5, "range": "2001-2500" }
+  ]
+}

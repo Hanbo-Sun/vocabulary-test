@@ -55,13 +55,13 @@
       "unitLabel": "words"
     },
     {
-      "code": "ja-kana",
-      "name": "Japanese (Kana)",
-      "file": "data/ja-kana.json",
+      "code": "ja",
+      "name": "Japanese (Words)",
+      "file": "data/ja.json",
       "size": 400,
       "bands": 20,
-      "mode": "character",
-      "unitLabel": "characters"
+      "mode": "word",
+      "unitLabel": "words"
     },
     {
       "code": "ko-hanja",

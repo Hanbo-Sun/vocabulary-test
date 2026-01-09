@@ -34,6 +34,8 @@ const I18N = {
     samples: "Samples",
     knownRate: "Known rate",
     coverage: "Coverage",
+    levelRanges: "Level ranges",
+    levelRangeItem: "{level}: {range} {unit}",
     close: "Close",
     retake: "Retake",
     copySummary: "Copy summary",
@@ -95,7 +97,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} bands",
     resultNote: "Estimator: {estimator}.",
-    shareSummary: "{language}: {estimate}, level {level} ({estimator}).",
+    shareSummary: "{language}: {estimate}, level {level}.",
     errorNameRequired: "Language name is required.",
     errorCodeRequired: "Language code is required.",
     errorCodeInvalid: "Language code must be lowercase letters, numbers, or dashes.",
@@ -132,6 +134,8 @@ const I18N = {
     samples: "Muestras",
     knownRate: "Tasa de acierto",
     coverage: "Cobertura",
+    levelRanges: "Rangos de nivel",
+    levelRangeItem: "{level}: {range} {unit}",
     close: "Cerrar",
     retake: "Repetir",
     copySummary: "Copiar resumen",
@@ -193,7 +197,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} bandas",
     resultNote: "Estimador: {estimator}.",
-    shareSummary: "{language}: {estimate}, nivel {level} ({estimator}).",
+    shareSummary: "{language}: {estimate}, nivel {level}.",
     errorNameRequired: "El nombre del idioma es obligatorio.",
     errorCodeRequired: "El código del idioma es obligatorio.",
     errorCodeInvalid: "El código debe usar minúsculas, números o guiones.",
@@ -230,6 +234,8 @@ const I18N = {
     samples: "样本数",
     knownRate: "认识率",
     coverage: "覆盖",
+    levelRanges: "等级范围",
+    levelRangeItem: "{level}：{range}{unit}",
     close: "关闭",
     retake: "再测一次",
     copySummary: "复制结果",
@@ -291,7 +297,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} 段",
     resultNote: "估算器：{estimator}。",
-    shareSummary: "{language}：{estimate}，等级 {level}（{estimator}）。",
+    shareSummary: "{language}：{estimate}，等级 {level}。",
     errorNameRequired: "请输入语言名称。",
     errorCodeRequired: "请输入语言代码。",
     errorCodeInvalid: "语言代码需为小写字母、数字或短横线。",
@@ -328,6 +334,8 @@ const I18N = {
     samples: "樣本數",
     knownRate: "認識率",
     coverage: "覆蓋",
+    levelRanges: "等級範圍",
+    levelRangeItem: "{level}：{range}{unit}",
     close: "關閉",
     retake: "再測一次",
     copySummary: "複製結果",
@@ -389,7 +397,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} 段",
     resultNote: "估算器：{estimator}。",
-    shareSummary: "{language}：{estimate}，等級 {level}（{estimator}）。",
+    shareSummary: "{language}：{estimate}，等級 {level}。",
     errorNameRequired: "請輸入語言名稱。",
     errorCodeRequired: "請輸入語言代碼。",
     errorCodeInvalid: "語言代碼需為小寫字母、數字或連字號。",
@@ -424,8 +432,10 @@ const I18N = {
     trustInstinct: "Fais confiance à ton instinct. Pas de définitions pendant le test.",
     estimate: "Estimation",
     samples: "Échantillons",
-    knownRate: "Taux connu",
+    knownRate: "Taux de connaissance",
     coverage: "Couverture",
+    levelRanges: "Plages de niveau",
+    levelRangeItem: "{level} : {range} {unit}",
     close: "Fermer",
     retake: "Recommencer",
     copySummary: "Copier le résumé",
@@ -487,7 +497,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} bandes",
     resultNote: "Estimateur : {estimator}.",
-    shareSummary: "{language} : {estimate}, niveau {level} ({estimator}).",
+    shareSummary: "{language} : {estimate}, niveau {level}.",
     errorNameRequired: "Le nom de la langue est requis.",
     errorCodeRequired: "Le code de langue est requis.",
     errorCodeInvalid: "Le code doit être en minuscules, chiffres ou tirets.",
@@ -524,12 +534,14 @@ const I18N = {
     samples: "Stichproben",
     knownRate: "Bekanntheitsrate",
     coverage: "Abdeckung",
+    levelRanges: "Stufenbereiche",
+    levelRangeItem: "{level}: {range} {unit}",
     close: "Schließen",
     retake: "Neu starten",
     copySummary: "Zusammenfassung kopieren",
     howWorksTitle: "So funktioniert der Test",
     howWorksBody:
-      "Wir sampeln von häufig zu selten und passen die Schwierigkeit an deine Antworten an. So schätzen wir deinen Wortschatz.",
+      "Wir nehmen Stichproben von häufig zu selten und passen die Schwierigkeit an deine Antworten an. So schätzen wir deinen Wortschatz.",
     howWorksBullet1: "Schnell antworten, um Grübeln zu vermeiden.",
     howWorksBullet2: "\"Nicht sicher\" zählt halb.",
     howWorksBullet3: "Wiederholen für genauere Schätzung.",
@@ -585,7 +597,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} Bänder",
     resultNote: "Schätzer: {estimator}.",
-    shareSummary: "{language}: {estimate}, Stufe {level} ({estimator}).",
+    shareSummary: "{language}: {estimate}, Stufe {level}.",
     errorNameRequired: "Sprachname ist erforderlich.",
     errorCodeRequired: "Sprachcode ist erforderlich.",
     errorCodeInvalid: "Sprachcode nur Kleinbuchstaben, Zahlen oder Bindestriche.",
@@ -622,6 +634,8 @@ const I18N = {
     samples: "サンプル",
     knownRate: "既知率",
     coverage: "カバレッジ",
+    levelRanges: "レベル範囲",
+    levelRangeItem: "{level}: {range} {unit}",
     close: "閉じる",
     retake: "もう一度",
     copySummary: "結果をコピー",
@@ -683,7 +697,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count} バンド",
     resultNote: "推定法: {estimator}.",
-    shareSummary: "{language}: {estimate}、レベル {level}（{estimator}）。",
+    shareSummary: "{language}: {estimate}、レベル {level}。",
     errorNameRequired: "言語名は必須です。",
     errorCodeRequired: "言語コードは必須です。",
     errorCodeInvalid: "言語コードは小文字・数字・ハイフンのみです。",
@@ -720,6 +734,8 @@ const I18N = {
     samples: "샘플",
     knownRate: "알고 있는 비율",
     coverage: "커버리지",
+    levelRanges: "레벨 범위",
+    levelRangeItem: "{level}: {range} {unit}",
     close: "닫기",
     retake: "다시 하기",
     copySummary: "요약 복사",
@@ -781,7 +797,7 @@ const I18N = {
     packUnits: "{count} {unit}",
     packBands: "{count}개 밴드",
     resultNote: "추정 방식: {estimator}.",
-    shareSummary: "{language}: {estimate}, 레벨 {level} ({estimator}).",
+    shareSummary: "{language}: {estimate}, 레벨 {level}.",
     errorNameRequired: "언어 이름이 필요합니다.",
     errorCodeRequired: "언어 코드가 필요합니다.",
     errorCodeInvalid: "언어 코드는 소문자, 숫자, 하이픈만 가능합니다.",
@@ -805,7 +821,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "Chinese (Traditional)",
     fr: "French",
     de: "German",
-    "ja-kana": "Japanese (Kana)",
+    ja: "Japanese (Words)",
     "ko-hanja": "Korean (Hanja)",
   },
   es: {
@@ -815,7 +831,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "Chino (tradicional)",
     fr: "Francés",
     de: "Alemán",
-    "ja-kana": "Japonés (kana)",
+    ja: "Japonés (palabras)",
     "ko-hanja": "Coreano (hanja)",
   },
   "zh-Hans": {
@@ -825,7 +841,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "繁体中文（字符）",
     fr: "法语",
     de: "德语",
-    "ja-kana": "日语（假名）",
+    ja: "日语（词汇）",
     "ko-hanja": "韩语（汉字）",
   },
   "zh-Hant": {
@@ -835,7 +851,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "繁體中文（字元）",
     fr: "法語",
     de: "德語",
-    "ja-kana": "日語（假名）",
+    ja: "日語（詞彙）",
     "ko-hanja": "韓語（漢字）",
   },
   fr: {
@@ -845,7 +861,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "Chinois (traditionnel)",
     fr: "Français",
     de: "Allemand",
-    "ja-kana": "Japonais (kana)",
+    ja: "Japonais (mots)",
     "ko-hanja": "Coréen (hanja)",
   },
   de: {
@@ -855,7 +871,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "Chinesisch (traditionell)",
     fr: "Französisch",
     de: "Deutsch",
-    "ja-kana": "Japanisch (Kana)",
+    ja: "Japanisch (Wörter)",
     "ko-hanja": "Koreanisch (Hanja)",
   },
   ja: {
@@ -865,7 +881,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "中国語（繁体字）",
     fr: "フランス語",
     de: "ドイツ語",
-    "ja-kana": "日本語（かな）",
+    ja: "日本語（語彙）",
     "ko-hanja": "韓国語（漢字）",
   },
   ko: {
@@ -875,7 +891,7 @@ const PACK_DISPLAY_NAMES = {
     "zh-hant": "중국어(번체)",
     fr: "프랑스어",
     de: "독일어",
-    "ja-kana": "일본어(가나)",
+    ja: "일본어(어휘)",
     "ko-hanja": "한국어(한자)",
   },
 };
@@ -917,6 +933,8 @@ const levelEl = document.getElementById("level");
 const levelExplainEl = document.getElementById("level-explain");
 const sampleCountEl = document.getElementById("sample-count");
 const knownRateEl = document.getElementById("known-rate");
+const levelRangesEl = document.getElementById("level-ranges");
+const levelRangesList = document.getElementById("level-ranges-list");
 
 let dataset = null;
 let currentQuestion = null;
@@ -1431,6 +1449,40 @@ function getLevel(estimate) {
   return levels.find((band) => estimate <= band.max) ?? levels[0];
 }
 
+function formatLevelRange(start, end) {
+  if (!Number.isFinite(end)) {
+    return `${start}+`;
+  }
+  return `${start}-${end}`;
+}
+
+function renderLevelRanges() {
+  if (!levelRangesEl || !levelRangesList) {
+    return;
+  }
+  const levels = getLevelBands();
+  let prevMax = 0;
+  levelRangesList.innerHTML = "";
+  levels.forEach((level, index) => {
+    const start = index === 0 ? 0 : prevMax + 1;
+    const end = level.max;
+    const range = formatLevelRange(start, end);
+    const item = document.createElement("li");
+    const label = t("levelRangeItem", {
+      level: level.level,
+      range,
+      unit: getUnitLabel(),
+    });
+    const strong = document.createElement("strong");
+    strong.textContent = level.level;
+    item.appendChild(strong);
+    item.appendChild(document.createTextNode(label.replace(`${level.level}`, "").trim()));
+    levelRangesList.appendChild(item);
+    prevMax = end;
+  });
+  levelRangesEl.style.display = "";
+}
+
 function showResults() {
   const estimate = estimateVocabulary(results);
   const levelInfo = getLevel(estimate);
@@ -1444,6 +1496,7 @@ function showResults() {
   sampleCountEl.textContent = t("sampleCount", { count: results.length });
   knownRateEl.textContent = `${Math.round(knownRate * 100)}%`;
   resultNote.textContent = "";
+  renderLevelRanges();
 
   setTestActive(false);
   setCardState(testCard, "idle");
@@ -1460,6 +1513,12 @@ function resetTest() {
   sampleCountEl.textContent = "—";
   knownRateEl.textContent = "—";
   resultNote.textContent = "";
+  if (levelRangesEl) {
+    levelRangesEl.style.display = "none";
+  }
+  if (levelRangesList) {
+    levelRangesList.innerHTML = "";
+  }
   totalQuestions = getQuestionCount();
   currentIndex = 0;
   results = [];
@@ -1878,7 +1937,6 @@ function bindActions() {
       language: getActiveLanguageName(),
       estimate: estimateEl.textContent,
       level: levelEl.textContent,
-      estimator: getEstimatorLabel(),
     });
     try {
       await navigator.clipboard.writeText(summary);
@@ -2008,6 +2066,86 @@ function hydrateLevelLabels() {
     levelChar5: "在專業文本中覆蓋面較廣。",
     levelChar6: "接近母語的冷僻字元掌握。",
   });
+  Object.assign(I18N.fr, {
+    levelA1: "Mots du quotidien pour des besoins simples.",
+    levelA2: "Vocabulaire courant sur des sujets familiers.",
+    levelB1: "Gère la lecture et les conversations usuelles.",
+    levelB2: "À l’aise avec les médias et textes généraux.",
+    levelC1: "Comprend un langage complexe et académique.",
+    levelC2: "Étendue quasi native, y compris les termes rares.",
+    levelChar1Name: "Niveau 1",
+    levelChar2Name: "Niveau 2",
+    levelChar3Name: "Niveau 3",
+    levelChar4Name: "Niveau 4",
+    levelChar5Name: "Niveau 5",
+    levelChar6Name: "Niveau 6",
+    levelChar1: "Reconnaît les caractères les plus courants.",
+    levelChar2: "Lit des textes quotidiens avec aide.",
+    levelChar3: "À l’aise avec la lecture générale.",
+    levelChar4: "Lit des textes complexes avec quelques lacunes.",
+    levelChar5: "Couverture avancée des textes spécialisés.",
+    levelChar6: "Maîtrise quasi native des caractères rares.",
+  });
+  Object.assign(I18N.de, {
+    levelA1: "Grundwortschatz für einfache Bedürfnisse.",
+    levelA2: "Häufiger Wortschatz zu vertrauten Themen.",
+    levelB1: "Bewältigt Routinelektüre und Gespräche.",
+    levelB2: "Sicher bei allgemeinen Medien und Texten.",
+    levelC1: "Versteht komplexe und akademische Sprache.",
+    levelC2: "Nahezu muttersprachliche Breite, inkl. seltener Wörter.",
+    levelChar1Name: "Stufe 1",
+    levelChar2Name: "Stufe 2",
+    levelChar3Name: "Stufe 3",
+    levelChar4Name: "Stufe 4",
+    levelChar5Name: "Stufe 5",
+    levelChar6Name: "Stufe 6",
+    levelChar1: "Erkennt die häufigsten Zeichen.",
+    levelChar2: "Liest Alltagstexte mit Unterstützung.",
+    levelChar3: "Sicher beim allgemeinen Lesen.",
+    levelChar4: "Liest komplexe Texte mit wenigen Lücken.",
+    levelChar5: "Fortgeschrittene Abdeckung in Fachtexten.",
+    levelChar6: "Nahezu muttersprachlicher Umgang mit seltenen Zeichen.",
+  });
+  Object.assign(I18N.ja, {
+    levelA1: "基本的な日常語で簡単な用事ができる。",
+    levelA2: "身近な話題の語彙をよく知っている。",
+    levelB1: "日常的な読解や会話に対応できる。",
+    levelB2: "一般的な媒体や文章を理解できる。",
+    levelC1: "複雑・学術的な表現も理解できる。",
+    levelC2: "稀な語も含む母語並みの語彙幅。",
+    levelChar1Name: "レベル 1",
+    levelChar2Name: "レベル 2",
+    levelChar3Name: "レベル 3",
+    levelChar4Name: "レベル 4",
+    levelChar5Name: "レベル 5",
+    levelChar6Name: "レベル 6",
+    levelChar1: "最頻出の文字を認識できる。",
+    levelChar2: "支援があれば日常文を読める。",
+    levelChar3: "一般的な文章を読める。",
+    levelChar4: "複雑な文章も概ね読める。",
+    levelChar5: "専門的な文章でも高いカバー率。",
+    levelChar6: "稀な文字まで含む母語並みの範囲。",
+  });
+  Object.assign(I18N.ko, {
+    levelA1: "기본 생활 어휘로 간단한 필요를 해결.",
+    levelA2: "익숙한 주제의 일상 어휘를 알고 있음.",
+    levelB1: "일상 독해와 대화에 대응 가능.",
+    levelB2: "일반 매체와 글을 편하게 이해.",
+    levelC1: "복잡하고 학술적인 언어도 이해.",
+    levelC2: "드문 단어까지 포함한 거의 원어민 수준.",
+    levelChar1Name: "레벨 1",
+    levelChar2Name: "레벨 2",
+    levelChar3Name: "레벨 3",
+    levelChar4Name: "레벨 4",
+    levelChar5Name: "레벨 5",
+    levelChar6Name: "레벨 6",
+    levelChar1: "가장 흔한 글자를 인식.",
+    levelChar2: "도움이 있으면 일상 글을 읽음.",
+    levelChar3: "일반적인 글을 읽을 수 있음.",
+    levelChar4: "복잡한 글도 큰 어려움 없이 읽음.",
+    levelChar5: "전문 글에서도 높은 커버리지.",
+    levelChar6: "희귀 글자까지 포함한 원어민 수준.",
+  });
 }
 
 async function init() {
@@ -2043,6 +2181,9 @@ async function init() {
   setCardState(resultCard, "idle");
   if (packCard) {
     setCardState(packCard, "active");
+  }
+  if (levelRangesEl) {
+    levelRangesEl.style.display = "none";
   }
   setTestActive(false);
   bindActions();

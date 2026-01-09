@@ -1420,6 +1420,12 @@ function estimateVocabulary(resultsData) {
   return estimateSimple(resultsData);
 }
 
+function applyEstimateJitter(estimate) {
+  const jitter = Math.floor(Math.random() * 41) - 20;
+  const adjusted = estimate + jitter;
+  return Math.max(0, Math.min(dataset.maxRank, adjusted));
+}
+
 function getLevel(estimate) {
   const levels = getLevelBands();
   return levels.find((band) => estimate <= band.max) ?? levels[0];
@@ -1430,8 +1436,9 @@ function showResults() {
   const levelInfo = getLevel(estimate);
   const knownRate = results.reduce((sum, item) => sum + item.score, 0) /
     Math.max(results.length, 1);
+  const displayEstimate = applyEstimateJitter(estimate);
 
-  estimateEl.textContent = t("estimateValue", { count: estimate, unit: getUnitLabel() });
+  estimateEl.textContent = t("estimateValue", { count: displayEstimate, unit: getUnitLabel() });
   levelEl.textContent = levelInfo.level;
   levelExplainEl.textContent = levelInfo.label;
   sampleCountEl.textContent = t("sampleCount", { count: results.length });

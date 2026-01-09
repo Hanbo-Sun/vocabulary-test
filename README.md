@@ -14,6 +14,10 @@ Language packs
 
 Estimator
 - Simple averages band samples without smoothing.
+- Displayed estimates include a small random jitter (±20) to avoid always showing round numbers.
 
 UI language
-- UI is available in English, 简体中文, 繁體中文, and Spanish via the selector.
+- UI is available in English, 简体中文, 繁體中文, Spanish, French, German, Japanese, and Korean via the selector.
+
+License
+- See `LICENSE.md` (all rights reserved; no copying or commercial use without permission).

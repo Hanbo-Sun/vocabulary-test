@@ -6,146 +6,2507 @@
   "maxRank": 10000,
   "bandSize": 500,
   "bands": [
-    { "index": 1, "range": "1-500", "size": 500 },
-    { "index": 2, "range": "501-1000", "size": 500 },
-    { "index": 3, "range": "1001-1500", "size": 500 },
-    { "index": 4, "range": "1501-2000", "size": 500 },
-    { "index": 5, "range": "2001-2500", "size": 500 },
-    { "index": 6, "range": "2501-3000", "size": 500 },
-    { "index": 7, "range": "3001-3500", "size": 500 },
-    { "index": 8, "range": "3501-4000", "size": 500 },
-    { "index": 9, "range": "4001-4500", "size": 500 },
-    { "index": 10, "range": "4501-5000", "size": 500 },
-    { "index": 11, "range": "5001-5500", "size": 500 },
-    { "index": 12, "range": "5501-6000", "size": 500 },
-    { "index": 13, "range": "6001-6500", "size": 500 },
-    { "index": 14, "range": "6501-7000", "size": 500 },
-    { "index": 15, "range": "7001-7500", "size": 500 },
-    { "index": 16, "range": "7501-8000", "size": 500 },
-    { "index": 17, "range": "8001-8500", "size": 500 },
-    { "index": 18, "range": "8501-9000", "size": 500 },
-    { "index": 19, "range": "9001-9500", "size": 500 },
-    { "index": 20, "range": "9501-10000", "size": 500 }
+    {
+      "index": 1,
+      "range": "1-500",
+      "size": 500
+    },
+    {
+      "index": 2,
+      "range": "501-1000",
+      "size": 500
+    },
+    {
+      "index": 3,
+      "range": "1001-1500",
+      "size": 500
+    },
+    {
+      "index": 4,
+      "range": "1501-2000",
+      "size": 500
+    },
+    {
+      "index": 5,
+      "range": "2001-2500",
+      "size": 500
+    },
+    {
+      "index": 6,
+      "range": "2501-3000",
+      "size": 500
+    },
+    {
+      "index": 7,
+      "range": "3001-3500",
+      "size": 500
+    },
+    {
+      "index": 8,
+      "range": "3501-4000",
+      "size": 500
+    },
+    {
+      "index": 9,
+      "range": "4001-4500",
+      "size": 500
+    },
+    {
+      "index": 10,
+      "range": "4501-5000",
+      "size": 500
+    },
+    {
+      "index": 11,
+      "range": "5001-5500",
+      "size": 500
+    },
+    {
+      "index": 12,
+      "range": "5501-6000",
+      "size": 500
+    },
+    {
+      "index": 13,
+      "range": "6001-6500",
+      "size": 500
+    },
+    {
+      "index": 14,
+      "range": "6501-7000",
+      "size": 500
+    },
+    {
+      "index": 15,
+      "range": "7001-7500",
+      "size": 500
+    },
+    {
+      "index": 16,
+      "range": "7501-8000",
+      "size": 500
+    },
+    {
+      "index": 17,
+      "range": "8001-8500",
+      "size": 500
+    },
+    {
+      "index": 18,
+      "range": "8501-9000",
+      "size": 500
+    },
+    {
+      "index": 19,
+      "range": "9001-9500",
+      "size": 500
+    },
+    {
+      "index": 20,
+      "range": "9501-10000",
+      "size": 500
+    }
   ],
   "words": [
-    { "word": "de", "rank": 1, "band": 1, "range": "1-500" },
-    { "word": "la", "rank": 2, "band": 1, "range": "1-500" },
-    { "word": "et", "rank": 3, "band": 1, "range": "1-500" },
-    { "word": "le", "rank": 4, "band": 1, "range": "1-500" },
-    { "word": "à", "rank": 5, "band": 1, "range": "1-500" },
-
-    { "word": "maison", "rank": 520, "band": 2, "range": "501-1000" },
-    { "word": "temps", "rank": 610, "band": 2, "range": "501-1000" },
-    { "word": "jour", "rank": 740, "band": 2, "range": "501-1000" },
-    { "word": "monde", "rank": 860, "band": 2, "range": "501-1000" },
-    { "word": "vie", "rank": 990, "band": 2, "range": "501-1000" },
-
-    { "word": "famille", "rank": 1050, "band": 3, "range": "1001-1500" },
-    { "word": "ville", "rank": 1120, "band": 3, "range": "1001-1500" },
-    { "word": "histoire", "rank": 1240, "band": 3, "range": "1001-1500" },
-    { "word": "musique", "rank": 1360, "band": 3, "range": "1001-1500" },
-    { "word": "santé", "rank": 1480, "band": 3, "range": "1001-1500" },
-
-    { "word": "capitaine", "rank": 1520, "band": 4, "range": "1501-2000" },
-    { "word": "signal", "rank": 1630, "band": 4, "range": "1501-2000" },
-    { "word": "aider", "rank": 1740, "band": 4, "range": "1501-2000" },
-    { "word": "voyage", "rank": 1860, "band": 4, "range": "1501-2000" },
-    { "word": "appareil", "rank": 1980, "band": 4, "range": "1501-2000" },
-
-    { "word": "minuit", "rank": 2050, "band": 5, "range": "2001-2500" },
-    { "word": "rassembler", "rank": 2140, "band": 5, "range": "2001-2500" },
-    { "word": "natif", "rank": 2260, "band": 5, "range": "2001-2500" },
-    { "word": "fortune", "rank": 2380, "band": 5, "range": "2001-2500" },
-    { "word": "surface", "rank": 2490, "band": 5, "range": "2001-2500" },
-
-    { "word": "délicat", "rank": 2550, "band": 6, "range": "2501-3000" },
-    { "word": "étendre", "rank": 2660, "band": 6, "range": "2501-3000" },
-    { "word": "motif", "rank": 2740, "band": 6, "range": "2501-3000" },
-    { "word": "témoin", "rank": 2860, "band": 6, "range": "2501-3000" },
-    { "word": "mystère", "rank": 2970, "band": 6, "range": "2501-3000" },
-
-    { "word": "fragile", "rank": 3050, "band": 7, "range": "3001-3500" },
-    { "word": "lointain", "rank": 3160, "band": 7, "range": "3001-3500" },
-    { "word": "abri", "rank": 3260, "band": 7, "range": "3001-3500" },
-    { "word": "arrivée", "rank": 3380, "band": 7, "range": "3001-3500" },
-    { "word": "marché", "rank": 3490, "band": 7, "range": "3001-3500" },
-
-    { "word": "concert", "rank": 3560, "band": 8, "range": "3501-4000" },
-    { "word": "habitat", "rank": 3660, "band": 8, "range": "3501-4000" },
-    { "word": "justice", "rank": 3760, "band": 8, "range": "3501-4000" },
-    { "word": "lessive", "rank": 3880, "band": 8, "range": "3501-4000" },
-    { "word": "réseau", "rank": 3990, "band": 8, "range": "3501-4000" },
-
-    { "word": "acquérir", "rank": 4050, "band": 9, "range": "4001-4500" },
-    { "word": "bénéfice", "rank": 4160, "band": 9, "range": "4001-4500" },
-    { "word": "prudence", "rank": 4270, "band": 9, "range": "4001-4500" },
-    { "word": "densité", "rank": 4380, "band": 9, "range": "4001-4500" },
-    { "word": "imposer", "rank": 4490, "band": 9, "range": "4001-4500" },
-
-    { "word": "récolte", "rank": 4560, "band": 10, "range": "4501-5000" },
-    { "word": "impact", "rank": 4660, "band": 10, "range": "4501-5000" },
-    { "word": "gérer", "rank": 4760, "band": 10, "range": "4501-5000" },
-    { "word": "notable", "rank": 4880, "band": 10, "range": "4501-5000" },
-    { "word": "précis", "rank": 4990, "band": 10, "range": "4501-5000" },
-
-    { "word": "abrupt", "rank": 5050, "band": 11, "range": "5001-5500" },
-    { "word": "candide", "rank": 5160, "band": 11, "range": "5001-5500" },
-    { "word": "déficit", "rank": 5260, "band": 11, "range": "5001-5500" },
-    { "word": "élaborer", "rank": 5380, "band": 11, "range": "5001-5500" },
-    { "word": "interdit", "rank": 5490, "band": 11, "range": "5001-5500" },
-
-    { "word": "horizon", "rank": 5560, "band": 12, "range": "5501-6000" },
-    { "word": "immense", "rank": 5660, "band": 12, "range": "5501-6000" },
-    { "word": "jargon", "rank": 5760, "band": 12, "range": "5501-6000" },
-    { "word": "cinétique", "rank": 5860, "band": 12, "range": "5501-6000" },
-    { "word": "tiède", "rank": 5990, "band": 12, "range": "5501-6000" },
-
-    { "word": "molécule", "rank": 6060, "band": 13, "range": "6001-6500" },
-    { "word": "nomade", "rank": 6160, "band": 13, "range": "6001-6500" },
-    { "word": "opaque", "rank": 6260, "band": 13, "range": "6001-6500" },
-    { "word": "paradoxe", "rank": 6380, "band": 13, "range": "6001-6500" },
-    { "word": "frisson", "rank": 6490, "band": 13, "range": "6001-6500" },
-
-    { "word": "résilient", "rank": 6550, "band": 14, "range": "6501-7000" },
-    { "word": "sérénité", "rank": 6660, "band": 14, "range": "6501-7000" },
-    { "word": "tangible", "rank": 6760, "band": 14, "range": "6501-7000" },
-    { "word": "ultimatum", "rank": 6880, "band": 14, "range": "6501-7000" },
-    { "word": "vague", "rank": 6990, "band": 14, "range": "6501-7000" },
-
-    { "word": "fantasque", "rank": 7050, "band": 15, "range": "7001-7500" },
-    { "word": "aspirer", "rank": 7160, "band": 15, "range": "7001-7500" },
-    { "word": "zélé", "rank": 7260, "band": 15, "range": "7001-7500" },
-    { "word": "vivement", "rank": 7380, "band": 15, "range": "7001-7500" },
-    { "word": "encombrement", "rank": 7490, "band": 15, "range": "7001-7500" },
-
-    { "word": "diligent", "rank": 7560, "band": 16, "range": "7501-8000" },
-    { "word": "émerger", "rank": 7660, "band": 16, "range": "7501-8000" },
-    { "word": "frugal", "rank": 7760, "band": 16, "range": "7501-8000" },
-    { "word": "lueur", "rank": 7880, "band": 16, "range": "7501-8000" },
-    { "word": "creux", "rank": 7990, "band": 16, "range": "7501-8000" },
-
-    { "word": "intrigue", "rank": 8060, "band": 17, "range": "8001-8500" },
-    { "word": "jonction", "rank": 8160, "band": 17, "range": "8001-8500" },
-    { "word": "noué", "rank": 8260, "band": 17, "range": "8001-8500" },
-    { "word": "treillis", "rank": 8380, "band": 17, "range": "8001-8500" },
-    { "word": "méandre", "rank": 8490, "band": 17, "range": "8001-8500" },
-
-    { "word": "nuance", "rank": 8560, "band": 18, "range": "8501-9000" },
-    { "word": "orné", "rank": 8660, "band": 18, "range": "8501-9000" },
-    { "word": "pensif", "rank": 8760, "band": 18, "range": "8501-9000" },
-    { "word": "pittoresque", "rank": 8880, "band": 18, "range": "8501-9000" },
-    { "word": "ondulation", "rank": 8990, "band": 18, "range": "8501-9000" },
-
-    { "word": "stoïque", "rank": 9060, "band": 19, "range": "9001-9500" },
-    { "word": "fastidieux", "rank": 9160, "band": 19, "range": "9001-9500" },
-    { "word": "négligé", "rank": 9260, "band": 19, "range": "9001-9500" },
-    { "word": "irritant", "rank": 9380, "band": 19, "range": "9001-9500" },
-    { "word": "las", "rank": 9490, "band": 19, "range": "9001-9500" },
-
-    { "word": "zéphyr", "rank": 9560, "band": 20, "range": "9501-10000" },
-    { "word": "aurore", "rank": 9660, "band": 20, "range": "9501-10000" },
-    { "word": "ronce", "rank": 9760, "band": 20, "range": "9501-10000" },
-    { "word": "chiffre", "rank": 9880, "band": 20, "range": "9501-10000" },
-    { "word": "décroître", "rank": 9990, "band": 20, "range": "9501-10000" }
+    {
+      "word": "et",
+      "rank": 13,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "si",
+      "rank": 38,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "comme",
+      "rank": 63,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "ton",
+      "rank": 88,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "allez",
+      "rank": 113,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "parce",
+      "rank": 138,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "veut",
+      "rank": 163,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "maison",
+      "rank": 188,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "voulais",
+      "rank": 213,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "toutes",
+      "rank": 238,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "chance",
+      "rank": 263,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "super",
+      "rank": 288,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "devrais",
+      "rank": 313,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "aucune",
+      "rank": 338,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "trouve",
+      "rank": 363,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "enfin",
+      "rank": 388,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "boulot",
+      "rank": 413,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "femmes",
+      "rank": 438,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "ait",
+      "rank": 463,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "souviens",
+      "rank": 488,
+      "band": 1,
+      "range": "1-500"
+    },
+    {
+      "word": "serai",
+      "rank": 513,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "heureux",
+      "rank": 538,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "attend",
+      "rank": 563,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "payer",
+      "rank": 588,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "musique",
+      "rank": 613,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "changé",
+      "rank": 638,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "roi",
+      "rank": 663,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "revenir",
+      "rank": 688,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "aviez",
+      "rank": 713,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "grâce",
+      "rank": 738,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "déteste",
+      "rank": 763,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "complètement",
+      "rank": 788,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "mots",
+      "rank": 813,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "porter",
+      "rank": 838,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "ferait",
+      "rank": 863,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "allô",
+      "rank": 888,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "avance",
+      "rank": 913,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "normal",
+      "rank": 938,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "juge",
+      "rank": 963,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "sentir",
+      "rank": 988,
+      "band": 2,
+      "range": "501-1000"
+    },
+    {
+      "word": "âme",
+      "rank": 1013,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "étrange",
+      "rank": 1038,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "aurez",
+      "rank": 1063,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "paul",
+      "rank": 1088,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "blessé",
+      "rank": 1113,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "livres",
+      "rank": 1138,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "dirais",
+      "rank": 1163,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "longue",
+      "rank": 1188,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "nord",
+      "rank": 1213,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "personnel",
+      "rank": 1238,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "chère",
+      "rank": 1263,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "assurer",
+      "rank": 1288,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "prouver",
+      "rank": 1313,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "détruire",
+      "rank": 1338,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "sarah",
+      "rank": 1363,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "test",
+      "rank": 1388,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "sauter",
+      "rank": 1413,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "trouves",
+      "rank": 1438,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "assieds-toi",
+      "rank": 1463,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "trouvez",
+      "rank": 1488,
+      "band": 3,
+      "range": "1001-1500"
+    },
+    {
+      "word": "rentré",
+      "rank": 1513,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "pleurer",
+      "rank": 1538,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "frappé",
+      "rank": 1563,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "billy",
+      "rank": 1588,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "foi",
+      "rank": 1613,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "discours",
+      "rank": 1638,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "lee",
+      "rank": 1663,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "majesté",
+      "rank": 1688,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "né",
+      "rank": 1713,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "odeur",
+      "rank": 1738,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "également",
+      "rank": 1763,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "charles",
+      "rank": 1788,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "frappe",
+      "rank": 1813,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "réalisé",
+      "rank": 1838,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "donnez",
+      "rank": 1863,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "bâtiment",
+      "rank": 1888,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "conscience",
+      "rank": 1913,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "joindre",
+      "rank": 1938,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "douche",
+      "rank": 1963,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "yeah",
+      "rank": 1988,
+      "band": 4,
+      "range": "1501-2000"
+    },
+    {
+      "word": "jason",
+      "rank": 2013,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "défendre",
+      "rank": 2038,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "assassin",
+      "rank": 2063,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "dirige",
+      "rank": 2088,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "rome",
+      "rank": 2113,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "joues",
+      "rank": 2138,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "familles",
+      "rank": 2163,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "allo",
+      "rank": 2188,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "respirer",
+      "rank": 2213,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "carl",
+      "rank": 2238,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "humeur",
+      "rank": 2263,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "plaisante",
+      "rank": 2288,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "gare",
+      "rank": 2313,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "deviens",
+      "rank": 2338,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "paroles",
+      "rank": 2363,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "tests",
+      "rank": 2388,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "voila",
+      "rank": 2413,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "passait",
+      "rank": 2438,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "tien",
+      "rank": 2463,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "réputation",
+      "rank": 2488,
+      "band": 5,
+      "range": "2001-2500"
+    },
+    {
+      "word": "département",
+      "rank": 2513,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "barre",
+      "rank": 2538,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "dis-tu",
+      "rank": 2563,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "pis",
+      "rank": 2588,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "arbres",
+      "rank": 2613,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "uniquement",
+      "rank": 2638,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "saute",
+      "rank": 2663,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "dépêchez-vous",
+      "rank": 2688,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "rencontrés",
+      "rank": 2713,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "absence",
+      "rank": 2738,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "whisky",
+      "rank": 2763,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "personnage",
+      "rank": 2788,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "possède",
+      "rank": 2813,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "palais",
+      "rank": 2838,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "envoyez",
+      "rank": 2863,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "ooh",
+      "rank": 2888,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "remis",
+      "rank": 2913,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "classique",
+      "rank": 2938,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "contacter",
+      "rank": 2963,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "étrangers",
+      "rank": 2988,
+      "band": 6,
+      "range": "2501-3000"
+    },
+    {
+      "word": "vivants",
+      "rank": 3013,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "section",
+      "rank": 3038,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "séance",
+      "rank": 3063,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "œuvre",
+      "rank": 3088,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "football",
+      "rank": 3113,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "empereur",
+      "rank": 3138,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "éducation",
+      "rank": 3163,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "appart",
+      "rank": 3188,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "objection",
+      "rank": 3213,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "sûrs",
+      "rank": 3238,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "malheureux",
+      "rank": 3263,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "mignonne",
+      "rank": 3288,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "donnée",
+      "rank": 3313,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "scénario",
+      "rank": 3338,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "objectif",
+      "rank": 3363,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "moche",
+      "rank": 3388,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "forts",
+      "rank": 3413,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "péché",
+      "rank": 3438,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "activité",
+      "rank": 3463,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "commission",
+      "rank": 3488,
+      "band": 7,
+      "range": "3001-3500"
+    },
+    {
+      "word": "mercredi",
+      "rank": 3513,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "pure",
+      "rank": 3538,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "regardais",
+      "rank": 3563,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "salade",
+      "rank": 3588,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "fauteuil",
+      "rank": 3613,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "teddy",
+      "rank": 3638,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "rigole",
+      "rank": 3663,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "interne",
+      "rank": 3688,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "fichu",
+      "rank": 3713,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "bol",
+      "rank": 3738,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "adorerais",
+      "rank": 3763,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "emporter",
+      "rank": 3788,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "caution",
+      "rank": 3813,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "couches",
+      "rank": 3838,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "courte",
+      "rank": 3863,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "espérer",
+      "rank": 3888,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "boisson",
+      "rank": 3913,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "sociale",
+      "rank": 3938,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "aurions",
+      "rank": 3963,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "coincée",
+      "rank": 3988,
+      "band": 8,
+      "range": "3501-4000"
+    },
+    {
+      "word": "escaliers",
+      "rank": 4013,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "ressources",
+      "rank": 4038,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "abattu",
+      "rank": 4063,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "complice",
+      "rank": 4088,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "événement",
+      "rank": 4113,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "girl",
+      "rank": 4138,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "devaient",
+      "rank": 4163,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "probable",
+      "rank": 4188,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "charges",
+      "rank": 4213,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "épaules",
+      "rank": 4238,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "sien",
+      "rank": 4263,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "présidente",
+      "rank": 4288,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "apprécié",
+      "rank": 4313,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "respiration",
+      "rank": 4338,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "gabriel",
+      "rank": 4363,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "gâteaux",
+      "rank": 4388,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "liam",
+      "rank": 4413,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "producteur",
+      "rank": 4438,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "dealer",
+      "rank": 4463,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "innocente",
+      "rank": 4488,
+      "band": 9,
+      "range": "4001-4500"
+    },
+    {
+      "word": "gloria",
+      "rank": 4513,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "relève",
+      "rank": 4538,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "servent",
+      "rank": 4563,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "planque",
+      "rank": 4588,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "telles",
+      "rank": 4613,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "transformé",
+      "rank": 4638,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "manche",
+      "rank": 4663,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "stanley",
+      "rank": 4688,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "poils",
+      "rank": 4713,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "élément",
+      "rank": 4738,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "menottes",
+      "rank": 4763,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "terriblement",
+      "rank": 4788,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "avaler",
+      "rank": 4813,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "sachiez",
+      "rank": 4838,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "parliez",
+      "rank": 4863,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "intimité",
+      "rank": 4888,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "bo",
+      "rank": 4913,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "arriverait",
+      "rank": 4938,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "capables",
+      "rank": 4963,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "suffira",
+      "rank": 4988,
+      "band": 10,
+      "range": "4501-5000"
+    },
+    {
+      "word": "lesquels",
+      "rank": 5013,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "nettoie",
+      "rank": 5038,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "localiser",
+      "rank": 5063,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "citoyen",
+      "rank": 5088,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "sandy",
+      "rank": 5113,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "chasseurs",
+      "rank": 5138,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "dépenser",
+      "rank": 5163,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "obligés",
+      "rank": 5188,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "volontiers",
+      "rank": 5213,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "occupes",
+      "rank": 5238,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "jetée",
+      "rank": 5263,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "guère",
+      "rank": 5288,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "occupés",
+      "rank": 5313,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "benjamin",
+      "rank": 5338,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "photographe",
+      "rank": 5363,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "survivants",
+      "rank": 5388,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "lindsay",
+      "rank": 5413,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "international",
+      "rank": 5438,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "-ooo--",
+      "rank": 5463,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "zach",
+      "rank": 5488,
+      "band": 11,
+      "range": "5001-5500"
+    },
+    {
+      "word": "spéciales",
+      "rank": 5513,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "biscuits",
+      "rank": 5538,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "enfuie",
+      "rank": 5563,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "innocence",
+      "rank": 5588,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "prenant",
+      "rank": 5613,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "kennedy",
+      "rank": 5638,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "laisserais",
+      "rank": 5663,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "social",
+      "rank": 5688,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "ultime",
+      "rank": 5713,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "sociaux",
+      "rank": 5738,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "degré",
+      "rank": 5763,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "poussez",
+      "rank": 5788,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "viendrait",
+      "rank": 5813,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "emmenez-le",
+      "rank": 5838,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "évolution",
+      "rank": 5863,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "mordre",
+      "rank": 5888,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "habituer",
+      "rank": 5913,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "choisie",
+      "rank": 5938,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "souper",
+      "rank": 5963,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "voyou",
+      "rank": 5988,
+      "band": 12,
+      "range": "5501-6000"
+    },
+    {
+      "word": "pourvu",
+      "rank": 6013,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "ciao",
+      "rank": 6038,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "montant",
+      "rank": 6063,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "onze",
+      "rank": 6088,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "vulnérable",
+      "rank": 6113,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "bossé",
+      "rank": 6138,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "maurice",
+      "rank": 6163,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "polly",
+      "rank": 6188,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "haricots",
+      "rank": 6213,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "brute",
+      "rank": 6238,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "poursuivi",
+      "rank": 6263,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "former",
+      "rank": 6288,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "pa",
+      "rank": 6313,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "séparation",
+      "rank": 6338,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "racontez",
+      "rank": 6363,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "cortex",
+      "rank": 6388,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "comptait",
+      "rank": 6413,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "cœurs",
+      "rank": 6438,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "bell",
+      "rank": 6463,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "regret",
+      "rank": 6488,
+      "band": 13,
+      "range": "6001-6500"
+    },
+    {
+      "word": "matelas",
+      "rank": 6513,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "peggy",
+      "rank": 6538,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "colonie",
+      "rank": 6563,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "tripes",
+      "rank": 6588,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "chargée",
+      "rank": 6613,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "vaincu",
+      "rank": 6638,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "banane",
+      "rank": 6663,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "rein",
+      "rank": 6688,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "instable",
+      "rank": 6713,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "commentaires",
+      "rank": 6738,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "vidé",
+      "rank": 6763,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "supposée",
+      "rank": 6788,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "dirais-tu",
+      "rank": 6813,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "hotel",
+      "rank": 6838,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "chinoise",
+      "rank": 6863,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "accroché",
+      "rank": 6888,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "appelais",
+      "rank": 6913,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "chimique",
+      "rank": 6938,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "fédérale",
+      "rank": 6963,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "crochet",
+      "rank": 6988,
+      "band": 14,
+      "range": "6501-7000"
+    },
+    {
+      "word": "préparation",
+      "rank": 7013,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "arizona",
+      "rank": 7038,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "peintre",
+      "rank": 7063,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "embrasse-moi",
+      "rank": 7088,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "travailleurs",
+      "rank": 7113,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "dirigé",
+      "rank": 7138,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "distorsion",
+      "rank": 7163,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "traduit",
+      "rank": 7188,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "réaliste",
+      "rank": 7213,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "culot",
+      "rank": 7238,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "jonas",
+      "rank": 7263,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "achat",
+      "rank": 7288,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "revivre",
+      "rank": 7313,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "plume",
+      "rank": 7338,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "parié",
+      "rank": 7363,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "etais",
+      "rank": 7388,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "est-on",
+      "rank": 7413,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "affecte",
+      "rank": 7438,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "fantasme",
+      "rank": 7463,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "âgée",
+      "rank": 7488,
+      "band": 15,
+      "range": "7001-7500"
+    },
+    {
+      "word": "salles",
+      "rank": 7513,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "express",
+      "rank": 7538,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "fixé",
+      "rank": 7563,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "réchauffer",
+      "rank": 7588,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "marvin",
+      "rank": 7613,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "wally",
+      "rank": 7638,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "noyé",
+      "rank": 7663,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "je-je",
+      "rank": 7688,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "défauts",
+      "rank": 7713,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "mouillée",
+      "rank": 7738,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "accouchement",
+      "rank": 7763,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "embuscade",
+      "rank": 7788,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "coude",
+      "rank": 7813,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "pizzas",
+      "rank": 7838,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "bilan",
+      "rank": 7863,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "réglo",
+      "rank": 7888,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "jin",
+      "rank": 7913,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "prenez-le",
+      "rank": 7938,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "torturé",
+      "rank": 7963,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "croise",
+      "rank": 7988,
+      "band": 16,
+      "range": "7501-8000"
+    },
+    {
+      "word": "patte",
+      "rank": 8013,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "devrions-nous",
+      "rank": 8038,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "écoutais",
+      "rank": 8063,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "banlieue",
+      "rank": 8088,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "obéis",
+      "rank": 8113,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "contexte",
+      "rank": 8138,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "dragons",
+      "rank": 8163,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "excès",
+      "rank": 8188,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "pâques",
+      "rank": 8213,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "soutenu",
+      "rank": 8238,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "répété",
+      "rank": 8263,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "classes",
+      "rank": 8288,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "sécher",
+      "rank": 8313,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "wesley",
+      "rank": 8338,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "pr",
+      "rank": 8363,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "salir",
+      "rank": 8388,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "horaire",
+      "rank": 8413,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "parlerons",
+      "rank": 8438,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "invente",
+      "rank": 8463,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "vérification",
+      "rank": 8488,
+      "band": 17,
+      "range": "8001-8500"
+    },
+    {
+      "word": "lâche-le",
+      "rank": 8513,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "géante",
+      "rank": 8538,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "aimera",
+      "rank": 8563,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "municipal",
+      "rank": 8588,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "meute",
+      "rank": 8613,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "fourmis",
+      "rank": 8638,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "bates",
+      "rank": 8663,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "obligations",
+      "rank": 8688,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "laisserait",
+      "rank": 8713,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "pancakes",
+      "rank": 8738,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "gregory",
+      "rank": 8763,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "tentant",
+      "rank": 8788,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "introduire",
+      "rank": 8813,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "illégale",
+      "rank": 8838,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "enfermés",
+      "rank": 8863,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "intrusion",
+      "rank": 8888,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "gagnera",
+      "rank": 8913,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "trish",
+      "rank": 8938,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "joshua",
+      "rank": 8963,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "rasé",
+      "rank": 8988,
+      "band": 18,
+      "range": "8501-9000"
+    },
+    {
+      "word": "achètes",
+      "rank": 9013,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "parapluie",
+      "rank": 9038,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "jouir",
+      "rank": 9063,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "tracer",
+      "rank": 9088,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "trainer",
+      "rank": 9113,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "solides",
+      "rank": 9138,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "précaution",
+      "rank": 9163,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "étrangler",
+      "rank": 9188,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "fais-lui",
+      "rank": 9213,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "deja",
+      "rank": 9238,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "mangeait",
+      "rank": 9263,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "parle-lui",
+      "rank": 9288,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "voleuse",
+      "rank": 9313,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "baskets",
+      "rank": 9338,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "enfonce",
+      "rank": 9363,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "contourner",
+      "rank": 9388,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "phare",
+      "rank": 9413,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "concerts",
+      "rank": 9438,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "punie",
+      "rank": 9463,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "approbation",
+      "rank": 9488,
+      "band": 19,
+      "range": "9001-9500"
+    },
+    {
+      "word": "étendue",
+      "rank": 9513,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "consultant",
+      "rank": 9538,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "revenant",
+      "rank": 9563,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "privées",
+      "rank": 9588,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "financer",
+      "rank": 9613,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "tombera",
+      "rank": 9638,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "schéma",
+      "rank": 9663,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "devon",
+      "rank": 9688,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "athlète",
+      "rank": 9713,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "triangle",
+      "rank": 9738,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "gerald",
+      "rank": 9763,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "gratter",
+      "rank": 9788,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "nash",
+      "rank": 9813,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "wheeler",
+      "rank": 9838,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "patate",
+      "rank": 9863,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "préoccupé",
+      "rank": 9888,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "employeur",
+      "rank": 9913,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "trouvez-moi",
+      "rank": 9938,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "révolte",
+      "rank": 9963,
+      "band": 20,
+      "range": "9501-10000"
+    },
+    {
+      "word": "trousses",
+      "rank": 9988,
+      "band": 20,
+      "range": "9501-10000"
+    }
   ]
 }

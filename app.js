@@ -3,8 +3,7 @@ const BUILTIN_INDEX = "data/index.json";
 const STORAGE_KEY = "vocab.customPacks";
 const UI_LANG_KEY = "vocab.uiLanguage";
 const THEME_KEY = "vocab.uiTheme";
-const DENSITY_KEY = "vocab.uiDensity";
-const UI_LANGUAGES = ["auto", "en", "zh-Hans", "zh-Hant", "es"];
+const UI_LANGUAGES = ["auto", "en", "zh-Hans", "zh-Hant", "es", "fr", "de", "ja", "ko"];
 const ANSWER_SCORES = {
   yes: 1,
   unsure: 0.5,
@@ -26,6 +25,7 @@ const I18N = {
     estimatorSimple: "Simple",
     estimatorNoteSmoothed: "Smoothed keeps bands monotonic.",
     estimatorNoteSimple: "Simple averages band samples without smoothing.",
+    questionsLabel: "Questions",
     knowIt: "I know it",
     notSure: "Not sure",
     dontKnow: "I do not know it",
@@ -34,14 +34,15 @@ const I18N = {
     samples: "Samples",
     knownRate: "Known rate",
     coverage: "Coverage",
+    close: "Close",
     retake: "Retake",
     copySummary: "Copy summary",
     howWorksTitle: "How this test works",
     howWorksBody:
-      "We sample words across frequency bands (common to rare). You mark whether you know each word, and we estimate your total vocabulary size using a smoothed, monotonic model across bands.",
+      "We sample from common to rare and adapt difficulty as you answer. Your responses estimate total vocabulary size.",
     howWorksBullet1: "Answer quickly to reduce second-guessing.",
     howWorksBullet2: "\"Not sure\" counts as half-known.",
-    howWorksBullet3: "Switch estimators for a raw vs smoothed view.",
+    howWorksBullet3: "Retake for a tighter estimate.",
     packsTitle: "Language packs",
     packsBody: "Add more languages or character sets later by importing CSV or JSON.",
     installedPacks: "Installed packs",
@@ -61,10 +62,6 @@ const I18N = {
     importButton: "Import pack",
     packHelp:
       "CSV columns: word or character, rank (optional: band, range). Unit type and band size help auto-generate ranges. JSON should match the existing data schema.",
-    densityLabel: "Density",
-    densityAiry: "Airy",
-    densityCompact: "Compact",
-    densityAuto: "Auto",
     themeLabel: "Theme",
     themeGlow: "Glow",
     themePaper: "Paper",
@@ -85,8 +82,7 @@ const I18N = {
     nounVocabulary: "vocabulary",
     nounCharacter: "character knowledge",
     heroTitle: "Discover your {language} {noun}",
-    heroCopy:
-      "A clean, fast test that samples {unit} across difficulty bands and estimates your total {noun}. No login. No fluff.",
+    heroCopy: "Fast test. Sample {unit}, estimate your {noun}.",
     estimateValue: "{count} {unit}",
     sampleCount: "{count} samples",
     coverageCount: "{count} bands",
@@ -98,7 +94,7 @@ const I18N = {
     packRemove: "Remove",
     packUnits: "{count} {unit}",
     packBands: "{count} bands",
-    resultNote: "Estimator: {estimator}. Based on {bands} frequency bands.",
+    resultNote: "Estimator: {estimator}.",
     shareSummary: "{language}: {estimate}, level {level} ({estimator}).",
     errorNameRequired: "Language name is required.",
     errorCodeRequired: "Language code is required.",
@@ -127,6 +123,7 @@ const I18N = {
     estimatorSimple: "Simple",
     estimatorNoteSmoothed: "Suavizado mantiene las bandas monotónicas.",
     estimatorNoteSimple: "Simple promedia las bandas sin suavizado.",
+    questionsLabel: "Preguntas",
     knowIt: "La conozco",
     notSure: "No estoy seguro",
     dontKnow: "No la conozco",
@@ -135,14 +132,15 @@ const I18N = {
     samples: "Muestras",
     knownRate: "Tasa de acierto",
     coverage: "Cobertura",
+    close: "Cerrar",
     retake: "Repetir",
     copySummary: "Copiar resumen",
     howWorksTitle: "Cómo funciona esta prueba",
     howWorksBody:
-      "Tomamos muestras de palabras de distintas bandas de frecuencia (comunes a raras). Indicas si las conoces y estimamos tu vocabulario total con un modelo suavizado y monotónico.",
+      "Muestreamos de común a raro y ajustamos la dificultad según tus respuestas. Así estimamos tu vocabulario total.",
     howWorksBullet1: "Responde rápido para reducir dudas.",
     howWorksBullet2: "\"No estoy seguro\" cuenta como medio conocido.",
-    howWorksBullet3: "Cambia el estimador para ver simple vs suavizado.",
+    howWorksBullet3: "Repite para una estimación más precisa.",
     packsTitle: "Packs de idioma",
     packsBody: "Añade idiomas o conjuntos de caracteres importando CSV o JSON.",
     installedPacks: "Packs instalados",
@@ -162,10 +160,6 @@ const I18N = {
     importButton: "Importar pack",
     packHelp:
       "Columnas CSV: word o character, rank (opcional: band, range). El tipo de unidad y el tamaño de banda ayudan a generar rangos. JSON debe seguir el esquema.",
-    densityLabel: "Densidad",
-    densityAiry: "Aireado",
-    densityCompact: "Compacto",
-    densityAuto: "Auto",
     themeLabel: "Tema",
     themeGlow: "Brillo",
     themePaper: "Papel",
@@ -186,8 +180,7 @@ const I18N = {
     nounVocabulary: "vocabulario",
     nounCharacter: "conocimiento de caracteres",
     heroTitle: "Descubre tu {noun} de {language}",
-    heroCopy:
-      "Una prueba rápida y limpia que toma muestras de {unit} por bandas y estima tu {noun} total. Sin registro. Sin relleno.",
+    heroCopy: "Prueba rápida. Muestra {unit} y estima tu {noun}.",
     estimateValue: "{count} {unit}",
     sampleCount: "{count} muestras",
     coverageCount: "{count} bandas",
@@ -199,7 +192,7 @@ const I18N = {
     packRemove: "Eliminar",
     packUnits: "{count} {unit}",
     packBands: "{count} bandas",
-    resultNote: "Estimador: {estimator}. Basado en {bands} bandas de frecuencia.",
+    resultNote: "Estimador: {estimator}.",
     shareSummary: "{language}: {estimate}, nivel {level} ({estimator}).",
     errorNameRequired: "El nombre del idioma es obligatorio.",
     errorCodeRequired: "El código del idioma es obligatorio.",
@@ -228,6 +221,7 @@ const I18N = {
     estimatorSimple: "简单",
     estimatorNoteSmoothed: "平滑保证难度单调。",
     estimatorNoteSimple: "简单对各段直接平均。",
+    questionsLabel: "题量",
     knowIt: "我认识",
     notSure: "不确定",
     dontKnow: "我不认识",
@@ -236,14 +230,15 @@ const I18N = {
     samples: "样本数",
     knownRate: "认识率",
     coverage: "覆盖",
+    close: "关闭",
     retake: "再测一次",
     copySummary: "复制结果",
     howWorksTitle: "这项测试如何工作",
     howWorksBody:
-      "我们从不同频率段（常见到冷门）抽样词或字，你标记是否认识，再用平滑单调模型估算总量。",
+      "题目从高频到低频，并会根据你的答题情况调整难度，据此估算总词汇量。",
     howWorksBullet1: "快速作答，减少犹豫。",
     howWorksBullet2: "“不确定”按半懂计分。",
-    howWorksBullet3: "可切换估算器查看简单与平滑结果。",
+    howWorksBullet3: "可重复测试提升精度。",
     packsTitle: "语言包",
     packsBody: "可导入 CSV 或 JSON，扩展到其他语言或字符集。",
     installedPacks: "已安装语言包",
@@ -263,10 +258,6 @@ const I18N = {
     importButton: "导入",
     packHelp:
       "CSV 列：word 或 character，rank（可选：band,range）。单位与频段大小可自动生成范围。JSON 需符合示例结构。",
-    densityLabel: "密度",
-    densityAiry: "宽松",
-    densityCompact: "紧凑",
-    densityAuto: "自动",
     themeLabel: "主题",
     themeGlow: "柔光",
     themePaper: "纸感",
@@ -287,7 +278,7 @@ const I18N = {
     nounVocabulary: "词汇量",
     nounCharacter: "识字量",
     heroTitle: "测测你的{language}{noun}",
-    heroCopy: "快速测试，从不同频段抽样{unit}，估算你的总体{noun}。无需登录。",
+    heroCopy: "快速测试，抽样{unit}，估算你的{noun}。",
     estimateValue: "{count} {unit}",
     sampleCount: "{count} 题",
     coverageCount: "{count} 段",
@@ -299,7 +290,7 @@ const I18N = {
     packRemove: "移除",
     packUnits: "{count} {unit}",
     packBands: "{count} 段",
-    resultNote: "估算器：{estimator}。基于 {bands} 个频段。",
+    resultNote: "估算器：{estimator}。",
     shareSummary: "{language}：{estimate}，等级 {level}（{estimator}）。",
     errorNameRequired: "请输入语言名称。",
     errorCodeRequired: "请输入语言代码。",
@@ -328,6 +319,7 @@ const I18N = {
     estimatorSimple: "簡單",
     estimatorNoteSmoothed: "平滑確保難度單調。",
     estimatorNoteSimple: "簡單直接平均各段。",
+    questionsLabel: "題量",
     knowIt: "我認識",
     notSure: "不確定",
     dontKnow: "我不認識",
@@ -336,14 +328,15 @@ const I18N = {
     samples: "樣本數",
     knownRate: "認識率",
     coverage: "覆蓋",
+    close: "關閉",
     retake: "再測一次",
     copySummary: "複製結果",
     howWorksTitle: "這項測試如何運作",
     howWorksBody:
-      "我們從不同頻率段（常見到冷門）抽樣詞或字，你標記是否認識，再用平滑單調模型估算總量。",
+      "題目從高頻到低頻，並會根據你的作答調整難度，據此估算總詞彙量。",
     howWorksBullet1: "快速作答，減少猶豫。",
     howWorksBullet2: "「不確定」按半懂計分。",
-    howWorksBullet3: "可切換估算器查看簡單與平滑結果。",
+    howWorksBullet3: "可重複測試提升精度。",
     packsTitle: "語言包",
     packsBody: "可匯入 CSV 或 JSON，擴展到其他語言或字符集。",
     installedPacks: "已安裝語言包",
@@ -363,10 +356,6 @@ const I18N = {
     importButton: "匯入",
     packHelp:
       "CSV 欄位：word 或 character，rank（可選：band,range）。單位與頻段大小可自動生成範圍。JSON 需符合示例結構。",
-    densityLabel: "密度",
-    densityAiry: "寬鬆",
-    densityCompact: "緊湊",
-    densityAuto: "自動",
     themeLabel: "主題",
     themeGlow: "柔光",
     themePaper: "紙感",
@@ -387,7 +376,7 @@ const I18N = {
     nounVocabulary: "詞彙量",
     nounCharacter: "識字量",
     heroTitle: "測測你的{language}{noun}",
-    heroCopy: "快速測試，從不同頻段抽樣{unit}，估算你的總體{noun}。無需登入。",
+    heroCopy: "快速測試，抽樣{unit}，估算你的{noun}。",
     estimateValue: "{count} {unit}",
     sampleCount: "{count} 題",
     coverageCount: "{count} 段",
@@ -399,7 +388,7 @@ const I18N = {
     packRemove: "移除",
     packUnits: "{count} {unit}",
     packBands: "{count} 段",
-    resultNote: "估算器：{estimator}。基於 {bands} 個頻段。",
+    resultNote: "估算器：{estimator}。",
     shareSummary: "{language}：{estimate}，等級 {level}（{estimator}）。",
     errorNameRequired: "請輸入語言名稱。",
     errorCodeRequired: "請輸入語言代碼。",
@@ -413,6 +402,398 @@ const I18N = {
     errorCsvEmpty: "CSV 檔案為空。",
     errorNoWords: "資料中沒有詞條。",
     errorNoValidWords: "未找到有效詞條。",
+  },
+  fr: {
+    badge: "Laboratoire de vocabulaire",
+    testLanguage: "Langue du test",
+    uiLanguage: "Langue de l’interface",
+    uiLanguageAuto: "Auto (système)",
+    startTest: "Commencer le test",
+    howItWorks: "Comment ça marche",
+    managePacks: "Gérer les packs",
+    question: "Question",
+    estimatorLabel: "Estimateur",
+    estimatorSmoothed: "Lissé",
+    estimatorSimple: "Simple",
+    estimatorNoteSmoothed: "Le lissage garde les bandes monotones.",
+    estimatorNoteSimple: "Simple moyenne les bandes sans lissage.",
+    questionsLabel: "Questions",
+    knowIt: "Je connais",
+    notSure: "Pas sûr",
+    dontKnow: "Je ne connais pas",
+    trustInstinct: "Fais confiance à ton instinct. Pas de définitions pendant le test.",
+    estimate: "Estimation",
+    samples: "Échantillons",
+    knownRate: "Taux connu",
+    coverage: "Couverture",
+    close: "Fermer",
+    retake: "Recommencer",
+    copySummary: "Copier le résumé",
+    howWorksTitle: "Comment fonctionne ce test",
+    howWorksBody:
+      "Nous échantillonnons du fréquent au rare et adaptons la difficulté à tes réponses. Cela estime ton vocabulaire total.",
+    howWorksBullet1: "Réponds vite pour éviter les hésitations.",
+    howWorksBullet2: "\"Pas sûr\" compte à moitié.",
+    howWorksBullet3: "Refais le test pour affiner l’estimation.",
+    packsTitle: "Packs de langue",
+    packsBody: "Ajoute d’autres langues ou jeux de caractères via CSV ou JSON.",
+    installedPacks: "Packs installés",
+    importPack: "Importer un pack",
+    languageName: "Nom de la langue",
+    languageCode: "Code de langue",
+    unitType: "Type d’unité",
+    unitAuto: "Auto (depuis le fichier)",
+    unitWord: "Mot",
+    unitCharacter: "Caractère",
+    bandSize: "Taille de bande (optionnel)",
+    packFile: "Fichier du pack (JSON ou CSV)",
+    templateCsvWord: "Modèle CSV (mots)",
+    templateCsvChar: "Modèle CSV (caractères)",
+    templateJsonWord: "Modèle JSON (mots)",
+    templateJsonChar: "Modèle JSON (caractères)",
+    importButton: "Importer",
+    packHelp:
+      "Colonnes CSV : word ou character, rank (optionnel : band, range). Le type d’unité et la taille de bande aident à générer les plages. Le JSON doit suivre le schéma.",
+    themeLabel: "Thème",
+    themeGlow: "Douce lumière",
+    themePaper: "Papier",
+    themeAuto: "Auto",
+    languageNamePlaceholder: "Espagnol",
+    languageCodePlaceholder: "es",
+    bandSizePlaceholder: "500",
+    statusReady: "Prêt",
+    statusLoading: "Chargement...",
+    statusImported: "Importé",
+    statusFixErrors: "Corriger",
+    statusInvalidFile: "Fichier invalide",
+    copySuccess: "Copié",
+    copyFailed: "Échec de copie",
+    bandLabel: "Bande {band} ({range})",
+    unitWords: "mots",
+    unitCharacters: "caractères",
+    nounVocabulary: "vocabulaire",
+    nounCharacter: "connaissance des caractères",
+    heroTitle: "Découvre ton {noun} en {language}",
+    heroCopy: "Test rapide. Échantillonne des {unit}, estime ton {noun}.",
+    estimateValue: "{count} {unit}",
+    sampleCount: "{count} échantillons",
+    coverageCount: "{count} bandes",
+    packNoPacks: "Aucun pack installé.",
+    packBuiltIn: "Intégré",
+    packCustom: "Personnalisé",
+    packUse: "Utiliser",
+    packActive: "Actif",
+    packRemove: "Supprimer",
+    packUnits: "{count} {unit}",
+    packBands: "{count} bandes",
+    resultNote: "Estimateur : {estimator}.",
+    shareSummary: "{language} : {estimate}, niveau {level} ({estimator}).",
+    errorNameRequired: "Le nom de la langue est requis.",
+    errorCodeRequired: "Le code de langue est requis.",
+    errorCodeInvalid: "Le code doit être en minuscules, chiffres ou tirets.",
+    errorFileRequired: "Veuillez choisir un fichier JSON ou CSV.",
+    errorBandSizeInvalid: "La taille de bande doit être positive.",
+    errorCodeBuiltin: "Ce code est déjà utilisé par un pack intégré.",
+    errorCodeCustom: "Ce code est déjà utilisé par un pack personnalisé.",
+    errorParseFile: "Impossible d’analyser le fichier : {message}",
+    errorCsvMissingColumn: "Le CSV doit contenir une colonne 'word' ou 'character'.",
+    errorCsvEmpty: "Fichier CSV vide.",
+    errorNoWords: "Aucun mot dans le jeu de données.",
+    errorNoValidWords: "Aucun mot valide trouvé.",
+  },
+  de: {
+    badge: "Vokabularlabor",
+    testLanguage: "Testsprache",
+    uiLanguage: "UI-Sprache",
+    uiLanguageAuto: "Auto (System)",
+    startTest: "Test starten",
+    howItWorks: "So funktioniert es",
+    managePacks: "Pakete verwalten",
+    question: "Frage",
+    estimatorLabel: "Schätzer",
+    estimatorSmoothed: "Geglättet",
+    estimatorSimple: "Einfach",
+    estimatorNoteSmoothed: "Geglättet hält die Bänder monoton.",
+    estimatorNoteSimple: "Einfach mittelt die Bänder ohne Glättung.",
+    questionsLabel: "Fragen",
+    knowIt: "Kenne ich",
+    notSure: "Nicht sicher",
+    dontKnow: "Kenne ich nicht",
+    trustInstinct: "Vertrau deinem ersten Eindruck. Keine Definitionen während des Tests.",
+    estimate: "Schätzung",
+    samples: "Stichproben",
+    knownRate: "Bekanntheitsrate",
+    coverage: "Abdeckung",
+    close: "Schließen",
+    retake: "Neu starten",
+    copySummary: "Zusammenfassung kopieren",
+    howWorksTitle: "So funktioniert der Test",
+    howWorksBody:
+      "Wir sampeln von häufig zu selten und passen die Schwierigkeit an deine Antworten an. So schätzen wir deinen Wortschatz.",
+    howWorksBullet1: "Schnell antworten, um Grübeln zu vermeiden.",
+    howWorksBullet2: "\"Nicht sicher\" zählt halb.",
+    howWorksBullet3: "Wiederholen für genauere Schätzung.",
+    packsTitle: "Sprachpakete",
+    packsBody: "Weitere Sprachen oder Zeichensätze per CSV oder JSON hinzufügen.",
+    installedPacks: "Installierte Pakete",
+    importPack: "Paket importieren",
+    languageName: "Sprachname",
+    languageCode: "Sprachcode",
+    unitType: "Einheitstyp",
+    unitAuto: "Auto (aus Datei)",
+    unitWord: "Wort",
+    unitCharacter: "Zeichen",
+    bandSize: "Bandgröße (optional)",
+    packFile: "Paketdatei (JSON oder CSV)",
+    templateCsvWord: "CSV-Vorlage (Wörter)",
+    templateCsvChar: "CSV-Vorlage (Zeichen)",
+    templateJsonWord: "JSON-Vorlage (Wörter)",
+    templateJsonChar: "JSON-Vorlage (Zeichen)",
+    importButton: "Importieren",
+    packHelp:
+      "CSV-Spalten: word oder character, rank (optional: band, range). Einheitstyp und Bandgröße helfen bei der Bereichsbildung. JSON muss dem Schema folgen.",
+    themeLabel: "Thema",
+    themeGlow: "Glow",
+    themePaper: "Papier",
+    themeAuto: "Auto",
+    languageNamePlaceholder: "Spanisch",
+    languageCodePlaceholder: "es",
+    bandSizePlaceholder: "500",
+    statusReady: "Bereit",
+    statusLoading: "Laden...",
+    statusImported: "Importiert",
+    statusFixErrors: "Fehler beheben",
+    statusInvalidFile: "Ungültige Datei",
+    copySuccess: "Kopiert",
+    copyFailed: "Kopieren fehlgeschlagen",
+    bandLabel: "Band {band} ({range})",
+    unitWords: "Wörter",
+    unitCharacters: "Zeichen",
+    nounVocabulary: "Wortschatz",
+    nounCharacter: "Zeichenkenntnis",
+    heroTitle: "Entdecke deinen {language} {noun}",
+    heroCopy: "Schneller Test. Stichprobe von {unit}, schätze deinen {noun}.",
+    estimateValue: "{count} {unit}",
+    sampleCount: "{count} Stichproben",
+    coverageCount: "{count} Bänder",
+    packNoPacks: "Keine Pakete installiert.",
+    packBuiltIn: "Integriert",
+    packCustom: "Benutzerdefiniert",
+    packUse: "Nutzen",
+    packActive: "Aktiv",
+    packRemove: "Entfernen",
+    packUnits: "{count} {unit}",
+    packBands: "{count} Bänder",
+    resultNote: "Schätzer: {estimator}.",
+    shareSummary: "{language}: {estimate}, Stufe {level} ({estimator}).",
+    errorNameRequired: "Sprachname ist erforderlich.",
+    errorCodeRequired: "Sprachcode ist erforderlich.",
+    errorCodeInvalid: "Sprachcode nur Kleinbuchstaben, Zahlen oder Bindestriche.",
+    errorFileRequired: "Bitte eine JSON- oder CSV-Datei wählen.",
+    errorBandSizeInvalid: "Bandgröße muss positiv sein.",
+    errorCodeBuiltin: "Dieser Code wird bereits von einem integrierten Paket genutzt.",
+    errorCodeCustom: "Dieser Code wird bereits von einem benutzerdefinierten Paket genutzt.",
+    errorParseFile: "Datei konnte nicht gelesen werden: {message}",
+    errorCsvMissingColumn: "CSV muss eine Spalte 'word' oder 'character' enthalten.",
+    errorCsvEmpty: "CSV-Datei ist leer.",
+    errorNoWords: "Keine Wörter im Datensatz.",
+    errorNoValidWords: "Keine gültigen Wörter gefunden.",
+  },
+  ja: {
+    badge: "語彙ラボ",
+    testLanguage: "テスト言語",
+    uiLanguage: "UI言語",
+    uiLanguageAuto: "自動（システム）",
+    startTest: "テスト開始",
+    howItWorks: "仕組み",
+    managePacks: "パック管理",
+    question: "問題",
+    estimatorLabel: "推定法",
+    estimatorSmoothed: "平滑化",
+    estimatorSimple: "シンプル",
+    estimatorNoteSmoothed: "平滑化でバンドが単調になります。",
+    estimatorNoteSimple: "シンプルは平滑化せず平均します。",
+    questionsLabel: "問題数",
+    knowIt: "知っている",
+    notSure: "よくわからない",
+    dontKnow: "知らない",
+    trustInstinct: "直感で答えてください。テスト中に定義は表示しません。",
+    estimate: "推定",
+    samples: "サンプル",
+    knownRate: "既知率",
+    coverage: "カバレッジ",
+    close: "閉じる",
+    retake: "もう一度",
+    copySummary: "結果をコピー",
+    howWorksTitle: "このテストの仕組み",
+    howWorksBody:
+      "頻出から低頻度までサンプルし、回答に応じて難易度を調整して語彙量を推定します。",
+    howWorksBullet1: "素早く答えて迷いを減らす。",
+    howWorksBullet2: "「よくわからない」は半分として扱います。",
+    howWorksBullet3: "再テストで精度を上げられます。",
+    packsTitle: "言語パック",
+    packsBody: "CSV/JSON を読み込んで他の言語や文字セットを追加できます。",
+    installedPacks: "インストール済みパック",
+    importPack: "パックを読み込む",
+    languageName: "言語名",
+    languageCode: "言語コード",
+    unitType: "単位",
+    unitAuto: "自動（ファイル）",
+    unitWord: "単語",
+    unitCharacter: "文字",
+    bandSize: "バンドサイズ（任意）",
+    packFile: "パックファイル（JSON/CSV）",
+    templateCsvWord: "CSV テンプレート（単語）",
+    templateCsvChar: "CSV テンプレート（文字）",
+    templateJsonWord: "JSON テンプレート（単語）",
+    templateJsonChar: "JSON テンプレート（文字）",
+    importButton: "読み込む",
+    packHelp:
+      "CSV 列: word または character, rank（任意: band, range）。単位とバンドサイズで範囲を生成できます。JSON は既存の形式に合わせてください。",
+    themeLabel: "テーマ",
+    themeGlow: "グロー",
+    themePaper: "ペーパー",
+    themeAuto: "自動",
+    languageNamePlaceholder: "スペイン語",
+    languageCodePlaceholder: "es",
+    bandSizePlaceholder: "500",
+    statusReady: "準備完了",
+    statusLoading: "読み込み中...",
+    statusImported: "読み込み完了",
+    statusFixErrors: "修正してください",
+    statusInvalidFile: "無効なファイル",
+    copySuccess: "コピーしました",
+    copyFailed: "コピー失敗",
+    bandLabel: "バンド {band}（{range}）",
+    unitWords: "語",
+    unitCharacters: "文字",
+    nounVocabulary: "語彙",
+    nounCharacter: "文字知識",
+    heroTitle: "{language}の{noun}を測定",
+    heroCopy: "短時間テスト。{unit}をサンプルして{noun}を推定。",
+    estimateValue: "{count} {unit}",
+    sampleCount: "{count} 件",
+    coverageCount: "{count} バンド",
+    packNoPacks: "パックがありません。",
+    packBuiltIn: "内蔵",
+    packCustom: "カスタム",
+    packUse: "使用",
+    packActive: "使用中",
+    packRemove: "削除",
+    packUnits: "{count} {unit}",
+    packBands: "{count} バンド",
+    resultNote: "推定法: {estimator}.",
+    shareSummary: "{language}: {estimate}、レベル {level}（{estimator}）。",
+    errorNameRequired: "言語名は必須です。",
+    errorCodeRequired: "言語コードは必須です。",
+    errorCodeInvalid: "言語コードは小文字・数字・ハイフンのみです。",
+    errorFileRequired: "JSON または CSV を選択してください。",
+    errorBandSizeInvalid: "バンドサイズは正の数にしてください。",
+    errorCodeBuiltin: "そのコードは既に組み込みパックで使用されています。",
+    errorCodeCustom: "そのコードは既にカスタムパックで使用されています。",
+    errorParseFile: "ファイルを解析できません: {message}",
+    errorCsvMissingColumn: "CSV に 'word' または 'character' 列が必要です。",
+    errorCsvEmpty: "CSV が空です。",
+    errorNoWords: "データに語がありません。",
+    errorNoValidWords: "有効な語が見つかりません。",
+  },
+  ko: {
+    badge: "어휘 랩",
+    testLanguage: "테스트 언어",
+    uiLanguage: "UI 언어",
+    uiLanguageAuto: "자동(시스템)",
+    startTest: "테스트 시작",
+    howItWorks: "작동 방식",
+    managePacks: "팩 관리",
+    question: "문항",
+    estimatorLabel: "추정 방식",
+    estimatorSmoothed: "스무딩",
+    estimatorSimple: "단순",
+    estimatorNoteSmoothed: "스무딩은 밴드를 단조롭게 유지합니다.",
+    estimatorNoteSimple: "단순 평균으로 계산합니다.",
+    questionsLabel: "문항 수",
+    knowIt: "알아요",
+    notSure: "잘 모르겠어요",
+    dontKnow: "몰라요",
+    trustInstinct: "직감대로 답하세요. 테스트 중 정의는 표시되지 않습니다.",
+    estimate: "추정",
+    samples: "샘플",
+    knownRate: "알고 있는 비율",
+    coverage: "커버리지",
+    close: "닫기",
+    retake: "다시 하기",
+    copySummary: "요약 복사",
+    howWorksTitle: "이 테스트의 원리",
+    howWorksBody:
+      "자주 쓰이는 것부터 드문 것까지 샘플링하고, 답변에 맞춰 난이도를 조정해 어휘량을 추정합니다.",
+    howWorksBullet1: "빠르게 답해 망설임을 줄이세요.",
+    howWorksBullet2: "\"잘 모르겠어요\"는 절반으로 계산합니다.",
+    howWorksBullet3: "재테스트하면 더 정확해집니다.",
+    packsTitle: "언어 팩",
+    packsBody: "CSV 또는 JSON을 가져와 다른 언어나 문자 집합을 추가하세요.",
+    installedPacks: "설치된 팩",
+    importPack: "팩 가져오기",
+    languageName: "언어 이름",
+    languageCode: "언어 코드",
+    unitType: "단위 유형",
+    unitAuto: "자동(파일)",
+    unitWord: "단어",
+    unitCharacter: "문자",
+    bandSize: "밴드 크기(선택)",
+    packFile: "팩 파일(JSON 또는 CSV)",
+    templateCsvWord: "CSV 템플릿(단어)",
+    templateCsvChar: "CSV 템플릿(문자)",
+    templateJsonWord: "JSON 템플릿(단어)",
+    templateJsonChar: "JSON 템플릿(문자)",
+    importButton: "가져오기",
+    packHelp:
+      "CSV 열: word 또는 character, rank(선택: band, range). 단위와 밴드 크기를 이용해 범위를 생성합니다. JSON은 기존 스키마를 따라야 합니다.",
+    themeLabel: "테마",
+    themeGlow: "글로우",
+    themePaper: "페이퍼",
+    themeAuto: "자동",
+    languageNamePlaceholder: "스페인어",
+    languageCodePlaceholder: "es",
+    bandSizePlaceholder: "500",
+    statusReady: "준비됨",
+    statusLoading: "로딩 중...",
+    statusImported: "가져옴",
+    statusFixErrors: "오류 수정",
+    statusInvalidFile: "잘못된 파일",
+    copySuccess: "복사됨",
+    copyFailed: "복사 실패",
+    bandLabel: "밴드 {band} ({range})",
+    unitWords: "단어",
+    unitCharacters: "문자",
+    nounVocabulary: "어휘",
+    nounCharacter: "문자 지식",
+    heroTitle: "{language} {noun} 알아보기",
+    heroCopy: "빠른 테스트. {unit}를 샘플링해 {noun}을 추정합니다.",
+    estimateValue: "{count} {unit}",
+    sampleCount: "{count}개 샘플",
+    coverageCount: "{count}개 밴드",
+    packNoPacks: "설치된 팩이 없습니다.",
+    packBuiltIn: "기본",
+    packCustom: "사용자",
+    packUse: "사용",
+    packActive: "활성",
+    packRemove: "제거",
+    packUnits: "{count} {unit}",
+    packBands: "{count}개 밴드",
+    resultNote: "추정 방식: {estimator}.",
+    shareSummary: "{language}: {estimate}, 레벨 {level} ({estimator}).",
+    errorNameRequired: "언어 이름이 필요합니다.",
+    errorCodeRequired: "언어 코드가 필요합니다.",
+    errorCodeInvalid: "언어 코드는 소문자, 숫자, 하이픈만 가능합니다.",
+    errorFileRequired: "JSON 또는 CSV 파일을 선택하세요.",
+    errorBandSizeInvalid: "밴드 크기는 양수여야 합니다.",
+    errorCodeBuiltin: "이 코드는 기본 팩에서 이미 사용 중입니다.",
+    errorCodeCustom: "이 코드는 사용자 팩에서 이미 사용 중입니다.",
+    errorParseFile: "파일을 읽을 수 없습니다: {message}",
+    errorCsvMissingColumn: "CSV에는 'word' 또는 'character' 열이 필요합니다.",
+    errorCsvEmpty: "CSV 파일이 비었습니다.",
+    errorNoWords: "데이터에 단어가 없습니다.",
+    errorNoValidWords: "유효한 단어를 찾지 못했습니다.",
   },
 };
 
@@ -457,19 +838,56 @@ const PACK_DISPLAY_NAMES = {
     "ja-kana": "日語（假名）",
     "ko-hanja": "韓語（漢字）",
   },
+  fr: {
+    en: "Anglais",
+    es: "Espagnol",
+    zh: "Chinois (caractères)",
+    "zh-hant": "Chinois (traditionnel)",
+    fr: "Français",
+    de: "Allemand",
+    "ja-kana": "Japonais (kana)",
+    "ko-hanja": "Coréen (hanja)",
+  },
+  de: {
+    en: "Englisch",
+    es: "Spanisch",
+    zh: "Chinesisch (Zeichen)",
+    "zh-hant": "Chinesisch (traditionell)",
+    fr: "Französisch",
+    de: "Deutsch",
+    "ja-kana": "Japanisch (Kana)",
+    "ko-hanja": "Koreanisch (Hanja)",
+  },
+  ja: {
+    en: "英語",
+    es: "スペイン語",
+    zh: "中国語（漢字）",
+    "zh-hant": "中国語（繁体字）",
+    fr: "フランス語",
+    de: "ドイツ語",
+    "ja-kana": "日本語（かな）",
+    "ko-hanja": "韓国語（漢字）",
+  },
+  ko: {
+    en: "영어",
+    es: "스페인어",
+    zh: "중국어(한자)",
+    "zh-hant": "중국어(번체)",
+    fr: "프랑스어",
+    de: "독일어",
+    "ja-kana": "일본어(가나)",
+    "ko-hanja": "한국어(한자)",
+  },
 };
 const startButton = document.getElementById("start-test");
 const learnMoreButton = document.getElementById("learn-more");
-const managePacksButton = document.getElementById("manage-packs");
-const densityToggleButton = document.getElementById("density-toggle");
 const themeToggleButton = document.getElementById("theme-toggle");
 const restartButton = document.getElementById("restart");
 const shareButton = document.getElementById("share");
 
 const heroTitle = document.getElementById("hero-title");
 const heroCopy = document.getElementById("hero-copy");
-const estimatorSelect = document.getElementById("estimator");
-const estimatorNote = document.getElementById("estimator-note");
+const questionCountSelect = document.getElementById("question-count");
 const resultNote = document.getElementById("result-note");
 
 const languageSelect = document.getElementById("language");
@@ -483,14 +901,14 @@ const packFileInput = document.getElementById("pack-file");
 const packModeSelect = document.getElementById("pack-mode");
 const packBandSizeInput = document.getElementById("pack-band-size");
 const packErrors = document.getElementById("pack-errors");
+const answerButtons = Array.from(document.querySelectorAll("[data-answer]"));
 
 const testCard = document.getElementById("test-card");
 const resultCard = document.getElementById("result-card");
-const infoCard = document.getElementById("info-card");
 const packCard = document.getElementById("pack-card");
+const howModal = document.getElementById("how-modal");
 
 const wordEl = document.getElementById("word");
-const bandEl = document.getElementById("band");
 const progressEl = document.getElementById("progress");
 const meterFill = document.getElementById("meter-fill");
 
@@ -499,20 +917,25 @@ const levelEl = document.getElementById("level");
 const levelExplainEl = document.getElementById("level-explain");
 const sampleCountEl = document.getElementById("sample-count");
 const knownRateEl = document.getElementById("known-rate");
-const coverageEl = document.getElementById("coverage");
 
 let dataset = null;
-let session = [];
+let currentQuestion = null;
+let totalQuestions = TOTAL_QUESTIONS;
 let currentIndex = 0;
 let results = [];
+let bandPools = {};
+let usedWords = new Set();
+let adaptiveBand = 1;
+let correctStreak = 0;
+let wrongStreak = 0;
 let packIndex = [];
 let customPacks = [];
 let uiLanguage = "auto";
 let languageNoteState = "ready";
 let uiTheme = "glow";
-let uiDensity = "airy";
 let systemTheme = "glow";
-let systemDensity = "airy";
+let testActive = false;
+let datasetReady = false;
 
 function t(key, vars = {}) {
   const table = I18N[getEffectiveUiLanguage()] || I18N.en;
@@ -532,6 +955,18 @@ function detectUiLanguage() {
   }
   if (raw.startsWith("es")) {
     return "es";
+  }
+  if (raw.startsWith("fr")) {
+    return "fr";
+  }
+  if (raw.startsWith("de")) {
+    return "de";
+  }
+  if (raw.startsWith("ja")) {
+    return "ja";
+  }
+  if (raw.startsWith("ko")) {
+    return "ko";
   }
   return "en";
 }
@@ -586,34 +1021,12 @@ function applyTheme(theme) {
   localStorage.setItem(THEME_KEY, uiTheme);
 }
 
-function resolveDensity(density) {
-  if (density === "auto") {
-    return systemDensity;
-  }
-  return density === "compact" ? "compact" : "airy";
-}
-
-function applyDensity(density) {
-  uiDensity = density;
-  const resolved = resolveDensity(uiDensity);
-  document.body.classList.toggle("density-compact", resolved === "compact");
-  localStorage.setItem(DENSITY_KEY, uiDensity);
-}
-
 function updateToggleButtons() {
-  const densityKey = uiDensity === "auto"
-    ? "densityAuto"
-    : uiDensity === "compact"
-      ? "densityCompact"
-      : "densityAiry";
   const themeKey = uiTheme === "auto"
     ? "themeAuto"
     : uiTheme === "paper"
       ? "themePaper"
       : "themeGlow";
-  densityToggleButton.textContent = `${t("densityLabel")}: ${t(
-    densityKey
-  )}`;
   themeToggleButton.textContent = `${t("themeLabel")}: ${t(
     themeKey
   )}`;
@@ -621,6 +1034,9 @@ function updateToggleButtons() {
 
 function setLanguageNote(state) {
   languageNoteState = state;
+  if (!languageNote) {
+    return;
+  }
   const keyMap = {
     ready: "statusReady",
     loading: "statusLoading",
@@ -644,23 +1060,42 @@ function applyTranslations() {
       node.setAttribute("placeholder", value);
     }
   });
-  updateEstimatorNote();
   updateHeroCopy();
   updateToggleButtons();
   setLanguageNote(languageNoteState);
   renderLanguageOptions();
-  if (results.length > 0 && currentIndex >= session.length) {
+  if (results.length > 0 && currentIndex >= totalQuestions) {
     showResults();
-  } else if (dataset) {
-    resultNote.textContent = t("resultNote", {
-      estimator: getEstimatorLabel(),
-      bands: dataset.bands.length,
-    });
   }
 }
 
 function setCardState(card, state) {
   card.setAttribute("data-state", state);
+}
+
+function openHowModal() {
+  if (!howModal) {
+    return;
+  }
+  howModal.classList.add("is-open");
+  howModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function closeHowModal() {
+  if (!howModal) {
+    return;
+  }
+  howModal.classList.remove("is-open");
+  howModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+function setTestActive(active) {
+  testActive = active;
+  answerButtons.forEach((button) => {
+    button.disabled = !active;
+  });
 }
 
 function shuffle(array) {
@@ -705,18 +1140,18 @@ function getUnitLabel() {
   return resolveUnitLabel(dataset.unitLabel, dataset.mode);
 }
 
-function getEstimatorMode() {
-  return estimatorSelect.value || "smoothed";
-}
-
 function getEstimatorLabel() {
-  return getEstimatorMode() === "simple" ? t("estimatorSimple") : t("estimatorSmoothed");
+  return t("estimatorSimple");
 }
 
-function updateEstimatorNote() {
-  estimatorNote.textContent =
-    getEstimatorMode() === "simple" ? t("estimatorNoteSimple") : t("estimatorNoteSmoothed");
+function getQuestionCount() {
+  if (!questionCountSelect) {
+    return TOTAL_QUESTIONS;
+  }
+  const value = Number.parseInt(questionCountSelect.value, 10);
+  return Number.isFinite(value) ? Math.max(20, value) : TOTAL_QUESTIONS;
 }
+
 
 function updateHeroCopy() {
   if (!dataset) {
@@ -769,41 +1204,113 @@ function groupByBand(words) {
   return grouped;
 }
 
-function buildSession(words, total) {
+function buildBandPools(words) {
   const grouped = groupByBand(words);
-  const bands = shuffle(Object.keys(grouped));
-  const picks = [];
-  const used = new Set();
+  const pools = {};
+  dataset.bands.forEach((band) => {
+    const items = grouped[band.index] ?? [];
+    pools[band.index] = shuffle(items);
+  });
+  return pools;
+}
 
-  while (picks.length < total) {
-    let added = false;
-    bands.forEach((band) => {
-      if (picks.length >= total) {
-        return;
-      }
-      const options = grouped[band].filter((word) => !used.has(word.word));
-      if (options.length === 0) {
-        return;
-      }
-      const choice = options[Math.floor(Math.random() * options.length)];
-      picks.push(choice);
-      used.add(choice.word);
-      added = true;
-    });
-    if (!added) {
-      break;
+function clampBand(band) {
+  if (!dataset?.bands?.length) {
+    return band;
+  }
+  return Math.max(1, Math.min(dataset.bands.length, band));
+}
+
+function findNearestBand(startBand) {
+  if (!dataset?.bands?.length) {
+    return startBand;
+  }
+  if (bandPools[startBand]?.length) {
+    return startBand;
+  }
+  for (let offset = 1; offset < dataset.bands.length; offset += 1) {
+    const lower = startBand - offset;
+    const upper = startBand + offset;
+    if (lower >= 1 && bandPools[lower]?.length) {
+      return lower;
+    }
+    if (upper <= dataset.bands.length && bandPools[upper]?.length) {
+      return upper;
     }
   }
+  return startBand;
+}
 
-  return picks;
+function pullNextFromBand(band) {
+  const pool = bandPools[band] ?? [];
+  while (pool.length > 0) {
+    const candidate = pool.pop();
+    if (!usedWords.has(candidate.word)) {
+      usedWords.add(candidate.word);
+      return candidate;
+    }
+  }
+  return null;
+}
+
+function getNextQuestion() {
+  let targetBand = findNearestBand(adaptiveBand);
+  let next = pullNextFromBand(targetBand);
+  if (!next) {
+    for (let band = 1; band <= dataset.bands.length; band += 1) {
+      next = pullNextFromBand(band);
+      if (next) {
+        targetBand = band;
+        break;
+      }
+    }
+  }
+  adaptiveBand = targetBand;
+  return next;
+}
+
+function updateAdaptiveBand(score) {
+  if (score >= 1) {
+    correctStreak += 1;
+    wrongStreak = 0;
+  } else if (score <= 0) {
+    wrongStreak += 1;
+    correctStreak = 0;
+  } else {
+    correctStreak = 0;
+    wrongStreak = 0;
+  }
+
+  let step = 1;
+  if (correctStreak >= 4 || wrongStreak >= 3) {
+    step = 3;
+  } else if (correctStreak >= 2 || wrongStreak >= 2) {
+    step = 2;
+  }
+
+  if (score >= 1) {
+    adaptiveBand += step;
+  } else if (score <= 0) {
+    adaptiveBand -= step;
+  }
+  adaptiveBand = clampBand(adaptiveBand);
 }
 
 function updateQuestion() {
-  const current = session[currentIndex];
+  const current = currentQuestion;
+  if (!current) {
+    return;
+  }
+  setTestActive(true);
   wordEl.textContent = current.word;
-  bandEl.textContent = t("bandLabel", { band: current.band, range: current.range });
-  progressEl.textContent = `${currentIndex + 1} / ${session.length}`;
-  meterFill.style.width = `${((currentIndex + 1) / session.length) * 100}%`;
+  progressEl.textContent = `${currentIndex + 1} / ${totalQuestions}`;
+  meterFill.style.width = `${((currentIndex + 1) / totalQuestions) * 100}%`;
+}
+
+function setIdleProgress() {
+  const total = getQuestionCount();
+  progressEl.textContent = `1 / ${total}`;
+  meterFill.style.width = "0%";
 }
 
 function isotonicNonIncreasing(means, weights) {
@@ -910,8 +1417,7 @@ function estimateSimple(resultsData) {
 }
 
 function estimateVocabulary(resultsData) {
-  const mode = getEstimatorMode();
-  return mode === "simple" ? estimateSimple(resultsData) : estimateSmoothed(resultsData);
+  return estimateSimple(resultsData);
 }
 
 function getLevel(estimate) {
@@ -930,38 +1436,57 @@ function showResults() {
   levelExplainEl.textContent = levelInfo.label;
   sampleCountEl.textContent = t("sampleCount", { count: results.length });
   knownRateEl.textContent = `${Math.round(knownRate * 100)}%`;
-  coverageEl.textContent = t("coverageCount", { count: dataset.bands.length });
-  resultNote.textContent = t("resultNote", {
-    estimator: getEstimatorLabel(),
-    bands: dataset.bands.length,
-  });
+  resultNote.textContent = "";
 
+  setTestActive(false);
   setCardState(testCard, "idle");
   setCardState(resultCard, "active");
-  setCardState(infoCard, "active");
 }
 
 function resetTest() {
-  session = buildSession(dataset.words, TOTAL_QUESTIONS);
+  if (!datasetReady) {
+    return;
+  }
+  estimateEl.textContent = "—";
+  levelEl.textContent = "—";
+  levelExplainEl.textContent = "";
+  sampleCountEl.textContent = "—";
+  knownRateEl.textContent = "—";
+  resultNote.textContent = "";
+  totalQuestions = getQuestionCount();
   currentIndex = 0;
   results = [];
+  usedWords = new Set();
+  bandPools = buildBandPools(dataset.words);
+  adaptiveBand = Math.ceil(dataset.bands.length / 2);
+  correctStreak = 0;
+  wrongStreak = 0;
+  currentQuestion = getNextQuestion();
   updateQuestion();
+  setTestActive(true);
   setCardState(testCard, "active");
   setCardState(resultCard, "idle");
-  setCardState(infoCard, "active");
 }
 
 function handleAnswer(answer) {
-  const current = session[currentIndex];
+  if (!testActive) {
+    return;
+  }
+  const current = currentQuestion;
+  if (!current) {
+    return;
+  }
   results.push({
     word: current.word,
     band: current.band,
     score: ANSWER_SCORES[answer],
   });
+  updateAdaptiveBand(ANSWER_SCORES[answer]);
   currentIndex += 1;
-  if (currentIndex >= session.length) {
+  if (currentIndex >= totalQuestions) {
     showResults();
   } else {
+    currentQuestion = getNextQuestion();
     updateQuestion();
   }
 }
@@ -1115,6 +1640,9 @@ async function loadPack(code) {
 }
 
 function renderPackErrors(errors) {
+  if (!packErrors) {
+    return;
+  }
   if (!errors || errors.length === 0) {
     packErrors.classList.remove("active");
     packErrors.innerHTML = "";
@@ -1125,6 +1653,9 @@ function renderPackErrors(errors) {
 }
 
 function renderPackList(activeCode) {
+  if (!packList) {
+    return;
+  }
   packList.innerHTML = "";
   const allPacks = [
     ...packIndex.map((pack) => ({ ...pack, type: "builtin" })),
@@ -1225,6 +1756,9 @@ function flashLanguageNote(state) {
 }
 
 async function handlePackImport(event) {
+  if (!packForm) {
+    return;
+  }
   event.preventDefault();
   renderPackErrors([]);
   const errors = [];
@@ -1318,15 +1852,14 @@ function bindActions() {
   });
 
   startButton.addEventListener("click", () => {
+    if (!datasetReady) {
+      return;
+    }
     resetTest();
   });
 
   learnMoreButton.addEventListener("click", () => {
-    infoCard.scrollIntoView({ behavior: "smooth" });
-  });
-
-  managePacksButton.addEventListener("click", () => {
-    packCard.scrollIntoView({ behavior: "smooth" });
+    openHowModal();
   });
 
   restartButton.addEventListener("click", () => {
@@ -1355,22 +1888,28 @@ function bindActions() {
   });
 
   languageSelect.addEventListener("change", handleLanguageChange);
-  packForm.addEventListener("submit", handlePackImport);
-  estimatorSelect.addEventListener("change", () => {
-    updateEstimatorNote();
-    if (results.length > 0 && currentIndex >= session.length) {
-      showResults();
-    }
-  });
+  if (packForm) {
+    packForm.addEventListener("submit", handlePackImport);
+  }
+  if (questionCountSelect) {
+    questionCountSelect.addEventListener("change", () => {
+      resetTest();
+    });
+  }
   uiLanguageSelect.addEventListener("change", () => {
     setUiLanguage(uiLanguageSelect.value);
   });
 
-  densityToggleButton.addEventListener("click", () => {
-    const next = uiDensity === "airy" ? "compact" : uiDensity === "compact" ? "auto" : "airy";
-    applyDensity(next);
-    updateToggleButtons();
-  });
+  if (howModal) {
+    howModal.querySelectorAll("[data-modal-close]").forEach((button) => {
+      button.addEventListener("click", closeHowModal);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && howModal.classList.contains("is-open")) {
+        closeHowModal();
+      }
+    });
+  }
 
   themeToggleButton.addEventListener("click", () => {
     const next = uiTheme === "glow" ? "paper" : uiTheme === "paper" ? "auto" : "glow";
@@ -1470,20 +2009,13 @@ async function init() {
   uiLanguageSelect.value = uiLanguage;
   document.documentElement.lang = getEffectiveUiLanguage();
   systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "paper" : "glow";
-  systemDensity = window.matchMedia("(max-width: 720px)").matches ? "compact" : "airy";
   applyTheme(loadPreference(THEME_KEY, "glow"));
-  applyDensity(loadPreference(DENSITY_KEY, "airy"));
+  document.body.classList.add("density-compact");
+  startButton.disabled = true;
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
     systemTheme = event.matches ? "paper" : "glow";
     if (uiTheme === "auto") {
       applyTheme(uiTheme);
-      updateToggleButtons();
-    }
-  });
-  window.matchMedia("(max-width: 720px)").addEventListener("change", (event) => {
-    systemDensity = event.matches ? "compact" : "airy";
-    if (uiDensity === "auto") {
-      applyDensity(uiDensity);
       updateToggleButtons();
     }
   });
@@ -1496,12 +2028,16 @@ async function init() {
   loadCustomPacks();
   renderLanguageOptions();
   dataset = await loadPack(languageSelect.value || "en");
+  datasetReady = true;
+  startButton.disabled = false;
   updateHeroCopy();
-  updateEstimatorNote();
+  setIdleProgress();
   setCardState(testCard, "idle");
   setCardState(resultCard, "idle");
-  setCardState(infoCard, "active");
-  setCardState(packCard, "active");
+  if (packCard) {
+    setCardState(packCard, "active");
+  }
+  setTestActive(false);
   bindActions();
   applyTranslations();
 }

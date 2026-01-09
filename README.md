@@ -10,9 +10,9 @@ Language packs
 - Templates live in `templates/` for both word and character packs.
 - JSON schema matches the existing pack files (`mode`, `unitLabel`, `bands`, `words`).
 - CSV schema expects headers: `word` or `character`, `rank` (optional: `band,range`). Missing bands are computed from `bandSize` (default 500).
+- Built-in packs use 20 bands with 20 items per band.
 
 Estimator
-- Smoothed (default) applies a monotonic model across bands.
 - Simple averages band samples without smoothing.
 
 UI language

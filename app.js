@@ -997,15 +997,7 @@ function getEffectiveUiLanguage() {
 }
 
 function loadUiLanguage() {
-  try {
-    const stored = localStorage.getItem(UI_LANG_KEY);
-    if (stored && UI_LANGUAGES.includes(stored)) {
-      return stored;
-    }
-  } catch (error) {
-    return detectUiLanguage();
-  }
-  return "auto";
+  return "en";
 }
 
 function setUiLanguage(lang) {
@@ -2172,6 +2164,9 @@ async function init() {
   packIndex = indexData.packs || [];
   loadCustomPacks();
   renderLanguageOptions();
+  if (languageSelect.querySelector('option[value="en"]')) {
+    languageSelect.value = "en";
+  }
   dataset = await loadPack(languageSelect.value || "en");
   datasetReady = true;
   startButton.disabled = false;
